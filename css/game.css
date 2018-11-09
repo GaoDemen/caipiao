@@ -1,0 +1,172 @@
+.cai_header{
+    width: 100%;
+    height: 80px;
+    background: #3c4960;
+}
+
+.cai_content{
+    width: 100%;
+    height: 915px;
+    background: url('../image/game/bg.png');
+    overflow: hidden;
+}
+.cai_main{
+    width: 1186px;
+    height: 875px;
+    margin: 20px auto;
+}
+.cai_main_left{
+    width: 230px;
+    height: 875px;
+    background: #3c4960;
+    float: left;
+}
+.cai_main_titile{
+    width: 100%;
+    height: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+    background: #333e52;
+}
+.cai_main_left table{
+    width: 100%;
+    margin-top: 1px;
+    color: #ffffff;
+    text-align: center;
+}
+.cai_main_left table thead{
+    background: #333e52;
+}
+.cai_main_left thead th{
+    width: 50%;
+    text-align: center;
+    height: 30px;
+    color: #91a2c0;
+}
+.cai_main_left tbody tr{
+    height: 35px;
+    font-size: 12px;
+    border-bottom: 1px dashed #4b5a75;
+}
+.cai_main_left tbody tr span{
+    display: inline-block;
+    margin: 0 4px;
+}
+.cai_main_left tbody tr .active{
+    color: #f6cc49;
+}
+.cai_main_left tbody tr:nth-child(1){
+    height: 15px;
+    border-bottom: 0px dashed #4b5a75;
+}
+.chart{
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.cai_main_right{
+    float: left;
+    width: 956px;
+    height: 875px;
+    background: #ececec;
+    box-sizing: border-box;
+}
+.cai_right_title{
+    background: #ffffff;
+    width: 100%;
+    height: 40px;
+    padding: 0 18px;
+    box-sizing: border-box;
+}
+.cai_right_title li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding:0 18px;
+    color: #454545;
+}
+.cai_num{
+    width: 920px;
+    height: 380px;
+    margin: 10px auto;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+.cai_record ul{
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+.cai_record li{
+    float: left;
+    line-height: 40px;
+    padding: 0 20px;
+    position: relative;
+    color: #454545;
+    border-right: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+.cai_record .active::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 105px;
+    height: 2px;
+    background:#ffffff; 
+}
+.cai_record .active::after{
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 106px;
+    height: 2px;
+    background:#3c4960; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cai_btn{
+    width: 920px;
+    height: 185px;
+    margin: 10px auto;
+    background: #ffffff; 
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
+.cai_record{
+    width: 920px;
+    height: 220px;
+    margin: 10px auto;
+    background: #ffffff; 
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+}
