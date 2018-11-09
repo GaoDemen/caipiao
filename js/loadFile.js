@@ -8,4 +8,5 @@ var loadFile = function (url) {
      *加载头部文件
      */
     loadDom.header.load(url + "template/header.html");
+    loadDom.footer.load(url + "template/footer.html");
 }

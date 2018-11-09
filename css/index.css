@@ -97,6 +97,73 @@
 .nav_bottom_main .right>li:nth-child(1)::after{
     height: 0px;
 }
+
+
+.footer{
+    width: 100%;
+    height: 260px;
+    background: #232526;
+    overflow: hidden;
+}
+.footer_main{
+    width: 1200px;
+    margin: 25px auto 0;
+    text-align: center;
+    border-bottom: 1px dashed #424446;
+    padding: 25px 0;
+}
+.footer_aboutus{
+    width: 1200px;
+    margin: 30px auto 10px;
+    color: #ffffff;
+}
+.footer_aboutus ul{
+    text-align: center;
+}
+.footer_aboutus li{
+    display: inline-block;
+    position: relative; 
+    margin-left: 31px; 
+}
+.footer_aboutus li::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background: #5f5f5f;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+}
+.footer_aboutus li:nth-child(1)::after{
+    height: 0px;
+}
+.footer_me{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #797979;
+    line-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .announcement{
     width: 100%;
     height: 40px;
@@ -160,6 +227,7 @@
     background: url('../image/index/bg3.png');
     position: relative;
     cursor: pointer;
+    padding: 20px;
 }
 
 .index_meun_right li img{
@@ -167,20 +235,25 @@
     right: 0;
     bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.index_meun_right li h3{
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f7e6b0;
+}
+.index_meun_right li p{
+    color: #ffffff;
+    font-size: 14px; 
+    margin-bottom: 10px;
+}
+.index_meun_right li .paly_game{
+    width: 78px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    line-height: 30px;
+}
 
 
 
@@ -189,8 +262,40 @@
 
 .index_footer{
     width: 100%;
-    height: 484px;
-    background: url('../image/index/bg2.png')
+    height: 380px;
+    background: url('../image/index/bg2.png');
+    overflow: hidden;
 }
 
-
+.index_footer_main{
+    width: 1200px;
+    height: 300px;
+    margin: 40px auto;
+}
+.index_footer_main ul{
+    width: 1200px;
+    height: 300px
+}
+.index_footer_main ul li{
+    width: 400px;
+    height: 300px;
+    float: left;
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 35px 35px;
+    box-sizing: border-box;
+}
+.index_footer_main ul li:nth-child(2){
+    width: 398px;
+    margin:0 1px;
+}
+.index_footer_main ul li h3{
+    color: #a8915e;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.index_footer_main ul li p{
+    color: #666666;
+    font-size: 14px;
+    line-height: 25px;
+}
