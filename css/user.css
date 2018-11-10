@@ -80,13 +80,14 @@
     float: left;
     width: 33.33%;
     cursor: pointer;
+    text-align: center;
 }
 .user_header_right .tuo1{
     display:inline-block;
     width: 36px;
     height: 36px;
     background: url('../image/user/tuo1.png');
-    vertical-align: middle;
+
     font-size: 20px;
     text-align: center;
     line-height: 34px;
@@ -98,7 +99,7 @@
     width: 36px;
     height: 36px;
     background: url('../image/user/tuo2.png');
-    vertical-align: middle;
+
     font-size: 20px;
     text-align: center;
     line-height: 34px;
@@ -110,7 +111,7 @@
     width: 36px;
     height: 36px;
     background: url('../image/user/tuo3.png');
-    vertical-align: middle;
+
     font-size: 20px;
     text-align: center;
     line-height: 34px;

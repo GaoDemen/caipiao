@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
+    <title>个人中心</title>
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/common.css">
@@ -17,6 +17,8 @@
 </head>
 
 <body>
+    <!-- 加载头部文件 -->
+    <div class="header" id="header"> </div>
     <div class="user">
         <div class="user_main">
             <div class="user_header">
@@ -27,7 +29,7 @@
                             <span>天天发财 </span>
                         </p>
                         <p>
-                            <i class="iconfont icon-chongzhijilu"></i> 余额：
+                            <i class="iconfont icon-qiandai"></i> 余额：
                             <span> ￥8000.0000 </span> 元
                             <i class="iconfont icon-shuaxin"></i>
                         </p>
@@ -89,7 +91,7 @@
                         </div>
                         <div class="">
                             <p>
-                                <i class="iconfont icon-tubiao-"></i> 代理团队 </p>
+                                <i class="iconfont icon-users"></i> 代理团队 </p>
                             <ul>
 
                                 <li>密码修改 </li>
@@ -132,6 +134,8 @@
             </div>
         </div>
     </div>
+    <!-- 加载尾部文件 -->
+    <div class="footer" id="footer"> </div>
 </body>
 
 </html>
@@ -144,7 +148,7 @@
         });
         $(".user_foote_meun>div>ul>li").on('click', function () {
             $(".user_foote_meun>div>ul>li").removeClass("active")
-            $(this).addClass("active").siblings().removeClass("active");            
+            $(this).addClass("active").siblings().removeClass("active");
         })
     })
 </script>
