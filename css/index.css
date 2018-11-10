@@ -3,7 +3,7 @@
     height: 40px;
     background: #232526;
     color: #cccccc;
-    border-bottom: 1px solid #5f6161;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .nav_top_main {
@@ -31,7 +31,24 @@
 .nav_top_main .right>li {
     margin-left: 31px;
 }
-
+.nav_top_main .right>li i{
+    font-size: 12px;
+}
+.nav_top_main .right>li:nth-child(1) span:nth-child(1){
+    margin-right: 15px;
+}
+.nav_top_main .right>li:nth-child(1) i{
+    margin-left: 6px;
+}
+.nav_top_main .right>li:nth-child(2) i{
+    margin-right: 6px;
+}
+.nav_top_main .right>li:nth-child(6) i{
+    margin-right: 6px;
+}
+.nav_top_main .right>li:nth-child(3),.nav_top_main .right>li:nth-child(4),.nav_top_main .right>li:nth-child(5){
+    color: #f7e6b0;
+}
 .nav_top_main .right>li::after {
     content: '';
     position: absolute;
@@ -47,11 +64,18 @@
 .nav_top_main .right>li:nth-child(1)::after {
     height: 0px;
 }
-
+.nav_top_main .right>li{
+    color: #f7e6b0;
+}
+.nav_top_main .right>li:nth-child(1){
+    color: #cccccc;
+}
 .nav_top_main .left>li {
     padding: 0 19px;
 }
-
+.nav_top_main .left>li:hover{
+    color: #f7e6b0;
+}
 .nav_top_main .left>li:nth-child(2)::after {
     content: '';
     position: absolute;
@@ -94,11 +118,13 @@
     background: #37393a;
     color: #ffffff;
     box-sizing: border-box;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
 }
 
 .nav_bottom_main {
     width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 .nav_bottom_main .left {
@@ -110,19 +136,40 @@
 }
 
 .nav_bottom_main .right {
-    float: right;
+    position: absolute;
+    right: -28px;
+    top:-1px;
 }
 
 .nav_bottom_main li {
-    display: inline-block;
+    float: left;
     line-height: 75px;
     cursor: pointer;
     position: relative;
     font-size: 16px;
-    margin-left: 41px;
+    padding: 0 24px;
+}
+.nav_bottom_main li.active{
+    background: rgba(0,0,0,0.3);
+    color:#f7e6b0 ;
+}
+.nav_bottom_main li:hover{
+    color:#f7e6b0 ;
+    background: rgba(0,0,0,0.1);
+}
+.nav_bottom_main li i{
+    font-size: 12px;
+    color: #f8f8f8;
+}
+.nav_bottom_main li img{
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
 
-.nav_bottom_main .right>li::after {
+/* .nav_bottom_main .right>li::after {
     content: '';
     position: absolute;
     width: 1px;
@@ -132,7 +179,7 @@
     left: -20px;
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-}
+} */
 
 .nav_bottom_main .right>li:nth-child(1)::after {
     height: 0px;
@@ -169,8 +216,11 @@
     position: relative;
     margin-left: 31px;
     font-size: 12px;
+    cursor: pointer;
 }
-
+.footer_aboutus li:hover{
+    color: #f7e6b0;
+}
 .footer_aboutus li::after {
     content: '';
     position: absolute;
@@ -211,12 +261,18 @@
 
 
 
-
+#myCarousel{
+    position: relative;
+}
 
 .announcement {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 40px;
-    background: #0d0f11;
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
 }
 .announcement_mian{
     width: 1200px;
@@ -234,15 +290,16 @@
 .announcement_mian marquee{
     float: left;
     width: 1150px;
-    height: 50px;
+    height: 40px;
 }
 
 
 .index_meun {
     width: 100%;
     height: 544px;
-    background: url('../image/index/bg1.png');
+    background: url('../image/index/bg1.png') no-repeat;
     overflow: hidden;
+    background-size: cover;
 }
 
 .index_meun_mian {
@@ -250,6 +307,7 @@
     height: 426px;
     margin: 59px auto;
     background: #5f5f5f;
+    box-shadow: 0px 5px 13px rgba(0,0,0,0.4);
 }
 
 .index_meun_left {
@@ -293,6 +351,7 @@
 
 .lottery_list li:hover {
     background: rgba(0, 0, 0, 0.2);
+    color: #f7e6b0;
 }
 
 .index_meun_right li {
@@ -304,6 +363,21 @@
     position: relative;
     cursor: pointer;
     padding: 20px;
+    background-size: cover;
+    border-top:1px solid #282828; 
+    border-right:1px solid #282828; 
+}
+.index_meun_right li:nth-child(3){
+    border-right:0px solid #282828;
+}
+.index_meun_right li:nth-child(6){
+    border-right:0px solid #282828;
+}
+.index_meun_right li:nth-child(1){
+    border-left:1px solid #282828;
+}
+.index_meun_right li:nth-child(4){
+    border-left:1px solid #282828;
 }
 .index_meun_right .game_modul{
     position: absolute;
@@ -504,4 +578,7 @@
     height: 11px;
     margin-left: 3px;
     background: url('../image/index/h.png');   
+}
+.carousel-indicators{
+    bottom: 50px !important;
 }

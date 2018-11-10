@@ -24,21 +24,21 @@
                 <label class="userName" for="">
                     <div>
                         <img src="./image/login/xingmingyonghumingnicheng.png" alt="">
-                        <span> 用户名 </span>
+                        <!-- <span> 用户名 </span> -->
                     </div>
 
-                    <input name="" type="text">
+                    <input placeholder="用户名" name="" type="text">
                 </label>
                 <label class="userPassword" for="">
                     <div>
                         <img src="./image/login/yonghuming.png" alt="">
-                        <span> 密码 </span>
+                        <!-- <span> 密码 </span> -->
                     </div>
 
-                    <input name="" type="text">
+                    <input placeholder="密码" name="" type="text">
                     <i class="forget_password"> 忘记 ? </i>
                 </label>
-                <button class="login_submit" type="submit"> 登录 </button>
+                <button class="login_submit" type="buttom"> 登 <i></i> 录 </button>
             </form>
             <div class="domain_speed">
                 <img src="./image/login/ceshi.png" alt="">
@@ -68,3 +68,22 @@
 </body>
 
 </html>
+<script>
+$(".userName input").focus(function(){
+    // 这里是获取焦点时的事件
+    $(".userName").addClass('active');
+
+}) 
+$(".userName input").blur(function(){
+    // 这里是失去焦点时的事件
+    $(".userName").removeClass('active');
+}) 
+$(".userPassword input").focus(function(){
+    // 这里是获取焦点时的事件
+    $(".userPassword").addClass('active');
+}) 
+$(".userPassword input").blur(function(){
+    // 这里是失去焦点时的事件
+    $(".userPassword").removeClass('active');
+}) 
+</script>

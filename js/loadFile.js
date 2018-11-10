@@ -13,7 +13,7 @@ var loadFile = function (url,choose) {
         });
     }else{
         loadDom.header.load(url + "template/header.html",function () {
-            $(".nav_bottom_main img").attr('src',url+'image/index/logo.png');
+            $(".nav_bottom_main .logo").attr('src',url+'image/index/logo.png');
         });
     }
 
