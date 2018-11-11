@@ -92,3 +92,4 @@ var loadFile = function (url,choose) {
         $(".footer_main img").attr('src',url+'image/index/footerbg.png');
     });
 }
+

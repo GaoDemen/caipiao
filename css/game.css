@@ -127,7 +127,7 @@
 }
 
 .cai_header_time .time>b {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 45px;
   color: #ffffff;
   float: left;
@@ -139,7 +139,7 @@
   width: 28px;
   height: 45px;
   background: url('../image/game/timebg.png');
-  margin: 0 4px;
+  margin: 0 2px;
   position: relative;
   /* font-weight: bold; */
 
@@ -158,7 +158,7 @@
 .cai_header_time .time span b {
   color: #ffffff;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 28px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -175,13 +175,13 @@
 }
 
 .cai_main {
-  width: 1186px;
+  width: 1200px;
   height: 875px;
   margin: 20px auto;
 }
 
 .cai_main_left {
-  width: 230px;
+  width: 244px;
   height: 875px;
   background: #3c4960;
   float: left;
@@ -244,7 +244,9 @@
   margin-top: 20px;
   cursor: pointer;
 }
-
+.chart:hover{
+  color: #f7e6b0;
+}
 .cai_main_right {
   float: left;
   width: 956px;
@@ -268,10 +270,11 @@
   background: #ffffff;
   position: absolute;
   left: 0;
-  top: 44px;
+  top: 43px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
   padding: 7px 20px 20px;
   box-sizing: border-box;
+  z-index: 99;
 }
 
 .cai_right_gamelist>div {
@@ -305,9 +308,10 @@
 
 .cai_right_gamelist>div>ul>li.active {
   border-radius: 5px;
-  background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-color: rgb(61, 155, 255);
+  /* background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
   background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%); */
   color: #ffffff;
   /* width: 63px;
         height: 21px; */
@@ -365,8 +369,41 @@
 
 .cai_num_title>ul>li {
   float: left;
+  position: relative;
+  cursor: pointer;
 }
-
+.cai_num_title>ul>li .more{
+  width: 12px;
+  height: 13px;
+  display: inline-block;
+  background: url("../image/game/more.png");
+  cursor: pointer;
+}
+.cai_num_title>ul>li .more_detail{
+  position: absolute;
+  right: -288px;
+  top: 7px;
+  background: #ffffff;
+  width: 271px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  font-size: 12px;
+  color: #8b8b8b;
+  border-radius: 4px;
+  padding: 12px 15px 15px;
+  box-sizing: border-box;
+  display: none;
+}
+.cai_num_title>ul>li .more_detail p{
+  line-height: 20px;
+}
+.cai_num_title>ul>li .more_detail dd{
+  width: 17px;
+  height: 10px;
+  background: url(../image/game/tip_03.png);
+  position: absolute;
+  top: 10px;
+  left: -11px;
+}
 .cai_num_main {
   width: 100%;
   height: 290px;
@@ -509,9 +546,9 @@
 
 .num_btn_mian .prizeGroup,
 .money {
-  margin: 8px 20px 0 6px;
-  padding: 6px 5px;
-  border: 1px solid #aaaaaa;
+  /* margin: 8px 20px 0 6px;
+  padding: 6px 5px; */
+  /* border: 1px solid #aaaaaa; */
   font-size: 14px;
   cursor: pointer;
 }
@@ -743,9 +780,9 @@
 }
 
 .left_top_list {
-  float: left;
+  /* float: left; */
   height: 142px;
-  width: 637px;
+  width: 658px;
   padding: 6px 20px;
   box-sizing: border-box;
 }
@@ -944,8 +981,9 @@
 .nav_top_main .lottery_meun{
   position: absolute;
   top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0px;
+  /* left: 50%;
+  transform: translateX(-50%); */
   width: 990px;
   background: #494949;
   z-index: 99;

@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="../../css/game.css">
   <link rel="stylesheet" href="../../css/index.css">
   <link rel="stylesheet" href="../../css/iconfont.css">
+  <link rel="stylesheet" href="../../lib/style.css">
+  <link rel="stylesheet" href="../../lib/easyScroll.min.css">
   <script src="../../lib/jquery-1.9.1.min.js"></script>
+  <script src="../../lib/jqselectable.min.js"></script>
   <script src="../../js/loadFile.js"></script>
+  <script type="text/javascript" src="../../lib/easyscroll.js"></script>
 </head>
 
 <body>
@@ -25,22 +29,42 @@
       <div class="cai_header_time">
         <div class="cai_header_time_id">
           <p> 重庆时时彩 </p>
-          <p> 第 <span> 20181102029 </span> 期 </p>
+          <p> 第
+            <span> 20181102029 </span> 期 </p>
         </div>
         <div class="time">
-          <span> <b> 0 </b> <i></i> </span>
-          <span> <b> 0 </b> <i></i> </span>
+          <span>
+            <b> 0 </b>
+            <i></i>
+          </span>
+          <span>
+            <b> 0 </b>
+            <i></i>
+          </span>
           <b> : </b>
-          <span> <b> 0 </b> <i></i> </span>
-          <span> <b> 9 </b> <i></i> </span>
+          <span>
+            <b> 0 </b>
+            <i></i>
+          </span>
+          <span>
+            <b> 9 </b>
+            <i></i>
+          </span>
           <b> : </b>
-          <span> <b> 5 </b> <i></i> </span>
-          <span> <b> 8 </b> <i></i> </span>
+          <span>
+            <b> 5 </b>
+            <i></i>
+          </span>
+          <span>
+            <b> 8 </b>
+            <i></i>
+          </span>
         </div>
       </div>
       <div class="cai_header_number">
         <div>
-          <p> 第 <span> 20181102029 </span> 期 </p>
+          <p> 第
+            <span> 20181102029 </span> 期 </p>
           <p> 开奖结果 </p>
         </div>
         <div>
@@ -234,66 +258,143 @@
         </div>
         <div class="cai_num">
           <div class="cai_num_title">
-            <span> 当前玩法 : </span>
+            <span> 当前玩法&nbsp;: </span>
             <ul>
-              <li> 直选复试 </li>
+              <li id="gameplay_introduced">
+                &nbsp; 直选复试
+                <i class="more"></i>
+                <div class="more_detail">
+                  <p> 在百位、十位、个位上，分别选择一个号码作为一注，号码和顺序都一致即中奖。中奖金额为1940元。分别选择一个号码作为一注，号码和顺序都一致即中奖。中奖金额为1940元 </p>
+                  <p> 中奖实例: </p>
+                  <p> 开奖号码：**258 投注号码：**258 </p>
+                  <dd> </dd>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="cai_num_main">
             <ul>
-              <li> <span> 万位 </span> </li>
               <li>
-                <span class="active"> 0 </span> <span> 1 </span> <span> 2 </span> <span> 3 </span>
+                <span> 万位 </span>
+              </li>
+              <li>
+                <span class="active"> 0 </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
                 <span> 4 </span>
-                <span> 5 </span> <span> 6 </span> <span> 7 </span> <span> 8 </span> <span> 9 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
               </li>
               <li>
-                <span> 全 </span> <span> 大 </span> <span> 小 </span> <span> 奇 </span> <span> 偶 </span>
-                <span> 清 </span>
-              </li>
-            </ul>
-            <ul>
-              <li> <span> 千位 </span> </li>
-              <li>
-                <span> 0 </span> <span> 1 </span> <span> 2 </span> <span> 3 </span> <span> 4 </span>
-                <span> 5 </span> <span> 6 </span> <span> 7 </span> <span> 8 </span> <span> 9 </span>
-              </li>
-              <li>
-                <span class="active"> 全 </span> <span> 大 </span> <span> 小 </span> <span> 奇 </span>
+                <span> 全 </span>
+                <span> 大 </span>
+                <span> 小 </span>
+                <span> 奇 </span>
                 <span> 偶 </span>
                 <span> 清 </span>
               </li>
             </ul>
             <ul>
-              <li> <span> 百位 </span> </li>
               <li>
-                <span> 0 </span> <span> 1 </span> <span> 2 </span> <span> 3 </span> <span> 4 </span>
-                <span> 5 </span> <span> 6 </span> <span> 7 </span> <span> 8 </span> <span> 9 </span>
+                <span> 千位 </span>
               </li>
               <li>
-                <span> 全 </span> <span> 大 </span> <span> 小 </span> <span> 奇 </span> <span> 偶 </span>
+                <span> 0 </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> 4 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
+              </li>
+              <li>
+                <span class="active"> 全 </span>
+                <span> 大 </span>
+                <span> 小 </span>
+                <span> 奇 </span>
+                <span> 偶 </span>
                 <span> 清 </span>
               </li>
             </ul>
             <ul>
-              <li> <span> 十位 </span> </li>
               <li>
-                <span> 0 </span> <span> 1 </span> <span> 2 </span> <span> 3 </span> <span> 4 </span>
-                <span> 5 </span> <span> 6 </span> <span> 7 </span> <span> 8 </span> <span> 9 </span>
+                <span> 百位 </span>
               </li>
               <li>
-                <span> 全 </span> <span> 大 </span> <span> 小 </span> <span> 奇 </span> <span> 偶 </span>
+                <span> 0 </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> 4 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
+              </li>
+              <li>
+                <span> 全 </span>
+                <span> 大 </span>
+                <span> 小 </span>
+                <span> 奇 </span>
+                <span> 偶 </span>
                 <span> 清 </span>
               </li>
             </ul>
             <ul>
-              <li> <span> 个位 </span> </li>
               <li>
-                <span> 0 </span> <span> 1 </span> <span> 2 </span> <span> 3 </span> <span> 4 </span>
-                <span> 5 </span> <span> 6 </span> <span> 7 </span> <span> 8 </span> <span> 9 </span>
+                <span> 十位 </span>
               </li>
               <li>
-                <span> 全 </span> <span> 大 </span> <span> 小 </span> <span> 奇 </span> <span> 偶 </span>
+                <span> 0 </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> 4 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
+              </li>
+              <li>
+                <span> 全 </span>
+                <span> 大 </span>
+                <span> 小 </span>
+                <span> 奇 </span>
+                <span> 偶 </span>
+                <span> 清 </span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span> 个位 </span>
+              </li>
+              <li>
+                <span> 0 </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> 4 </span>
+                <span> 5 </span>
+                <span> 6 </span>
+                <span> 7 </span>
+                <span> 8 </span>
+                <span> 9 </span>
+              </li>
+              <li>
+                <span> 全 </span>
+                <span> 大 </span>
+                <span> 小 </span>
+                <span> 奇 </span>
+                <span> 偶 </span>
                 <span> 清 </span>
               </li>
             </ul>
@@ -301,16 +402,38 @@
           <div class="cai_num_btn">
             <div class="num_btn_mian">
               <span class="title"> 模式 : </span>
-              <span class="money">
-                <i> 2元 </i>
-                <i class="iconfont icon-xiala1"> </i>
+              <span class="money" id="simpleBox">
+                <!-- <i> 2元 </i>
+                <i class="iconfont icon-xiala1"> </i> -->
+                <select id="pref_noopt1" name="pref_noopt1" class="simpleBox">
+                  <option value="01">2元</option>
+                  <option value="02">1元</option>
+                  <option value="03">1角</option>
+                  <option value="04">1分</option>
+                  <option value="05">1厘</option>
+                </select>
               </span>
               <span class="title"> 选择返点 : </span>
               <span class="prizeGroup">
-                <i> 1960-0% </i>
-                <i class="iconfont icon-xiala1"> </i>
+                <!-- <i> 1960-0% </i>
+                <i class="iconfont icon-xiala1"> </i> -->
+                <select id="pref_noopt2" name="pref_noopt2" class="simpleBox">
+                  <option value="01">1960-0%</option>
+                  <option value="02">1960-1%</option>
+                  <option value="03">1960-2%</option>
+                  <option value="04">1960-3%</option>
+                  <option value="05">1960-4%</option>
+                  <option value="06">1960-5%</option>
+                  <option value="07">1960-6%</option>
+                  <option value="08">1960-7%</option>
+                  <option value="09">1960-8%</option>
+                  <option value="10">1960-9%</option>
+                </select>
               </span>
-              <span class="title"> 选择 <b> 0 </b> 注数,共 <b> ￥400.00,00 </b> </span>
+              <span class="title"> 选择
+                <b> 0 </b> 注数,共
+                <b> ￥400.00,00 </b>
+              </span>
             </div>
             <ul class="btn_add">
               <li> 添加号码 </li>
@@ -321,8 +444,8 @@
         <div class="cai_btn">
           <div class="cai_btn_left">
             <div class="cai_btn_left_top">
-              <div class="left_top_list">
-                <ul>
+              <div class="left_top_list" id="add_loctty" tyle="padding:20px;overflow:auto;">
+                <ul style="width:100%;height:100%">
                   <li>
                     <span> 后三,zh直选,直选复试 </span>
                     <span> 5|3|4 </span>
@@ -359,15 +482,28 @@
                     <span> ¥78.00 </span>
                     <i> x </i>
                   </li>
+                  <li>
+                    <span> 后三,zh直选,直选复试 </span>
+                    <span> 5|3|4 </span>
+                    <span> 2元 </span>
+                    <span> 1注 </span>
+                    <span> 1倍 </span>
+                    <span> ¥78.00 </span>
+                    <i> x </i>
+                  </li>
                 </ul>
-              </div>
-
-              <div class="left_top_scroll">
+       
 
               </div>
+
+              <!-- <div class="left_top_scroll">
+
+              </div> -->
             </div>
             <div class="cai_btn_left_bottom">
-              总注数 <span> 20 </span> 注，总金额 <span> ¥400.00,00 </span>
+              总注数
+              <span> 20 </span> 注，总金额
+              <span> ¥400.00,00 </span>
               <div class="clear_all">
                 删除
               </div>
@@ -388,7 +524,8 @@
                 <span> 46 </span>
               </p>
               <div class="btn">
-                <span><i class="iconfont icon-xxx"></i> 确认投注 </span>
+                <span>
+                  <i class="iconfont icon-xxx"></i> 确认投注 </span>
                 <span> 追号投注 </span>
               </div>
             </div>
@@ -396,11 +533,11 @@
         </div>
         <div class="cai_record">
           <ul>
-            <li class="active"> 投注记录 </li>
-            <li> 追号记录 </li>
+            <li data-id='bettingRecord'  class="active"> 投注记录 </li>
+            <li data-id='tracRecord' > 追号记录 </li>
           </ul>
           <div class="cai_record_table">
-            <table>
+            <table id="bettingRecord">
               <thead>
                 <tr>
                   <th>游戏 </th>
@@ -442,6 +579,40 @@
                 </tr>
               </tbody>
             </table>
+
+            <table id="tracRecord">
+                <thead>
+                  <tr>
+                    <th>游戏 </th>
+                    <th> 玩法 </th>
+                    <th> 期号 </th>
+                    <th> 奖金组 </th>
+                    <th> 开奖号码 </th>
+                    <th> 投注金额 </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td> 重庆时时彩 </td>
+                    <td> 前三直选 </td>
+                    <td> 10256554 </td>
+                    <td> 1960 </td>
+                    <td> 2 | 5| 0 | 3 | 2 </td>
+                    <td> 2元 </td>
+                  </tr>
+                  <tr>
+                    <td> 重庆时时彩 </td>
+                    <td> 前三直选 </td>
+                    <td> 10256554 </td>
+                    <td> 1960 </td>
+                    <td> 2 | 5| 0 | 3 | 2 </td>
+                    <td> 2元 </td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
       </div>
@@ -457,17 +628,63 @@
 
 </script>
 <script>
+  $(".cai_right_gamelist").hide();
+  $(".cai_right_title>ul li").mouseenter(function () {
+    $(".cai_right_gamelist").show();
+  })
+  $(".cai_right_title>ul li").mouseleave(function () {
     $(".cai_right_gamelist").hide();
-    $(".cai_right_title>ul li").mouseenter(function(){
-        $(".cai_right_gamelist").show();
-    })
-    $(".cai_right_title>ul li").mouseleave(function(){
-        $(".cai_right_gamelist").hide();
-    })
-    $(".cai_right_gamelist").mouseenter(function(){
-        $(".cai_right_gamelist").show();
-    })
-    $(".cai_right_gamelist").mouseleave(function(){
-        $(".cai_right_gamelist").hide();
-    })
+  })
+  $(".cai_right_gamelist").mouseenter(function () {
+    $(".cai_right_gamelist").show();
+  })
+  $(".cai_right_gamelist").mouseleave(function () {
+    $(".cai_right_gamelist").hide();
+  })
+  $("#gameplay_introduced").mouseenter(function () {
+    $(".more_detail").show();
+  })
+  $("#gameplay_introduced").mouseleave(function () {
+    $(".more_detail").hide();
+  })
+
+</script>
+<script>
+
+    (function () {
+      $(".simpleBox").jQselectable({
+        style: "simple",
+        show: "slideDown",
+        hide: "fadeOut",
+        showDuration: 150,
+        hideDuration: 150,
+        height: 150,
+        opacity: 1
+      });
+    }());
+
+
+
+</script>
+<script>
+  $(function () {
+    $('#add_loctty').easyScroll({
+      scrollAutoHide: false,
+      scrollOffset: 0,
+      scrollButtons: true,
+      scrollHorizontal: true
+    });
+  })
+
+</script>
+
+<script>
+  $("#tracRecord").hide();
+  $(".cai_record li").on('click',function(){
+    $(".cai_record li").removeClass('active');
+    $(this).addClass('active');
+    id = $(this).attr('data-id');
+    $(".cai_record_table table").hide();
+    $("#"+id).show()
+  })
 </script>

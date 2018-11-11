@@ -265,7 +265,7 @@
 
 .nav_bottom_main .right {
     position: absolute;
-    right: -28px;
+    right: 0px;
     top:-1px;
 }
 
@@ -812,6 +812,7 @@
 #announcement .modal-dialog{
     width: 610px;
     height: 378px;
+    margin-top: 212px;
 }
 
 #announcement .modal-content{
@@ -825,10 +826,11 @@
 #announcement .modal-body{
     margin-top: 3px;
     background: #f1f1f1;
-    padding: 26px;
+    padding: 26px 54px 26px 26px;
     font-size: 14px;
     color: #787878;
     height: 325px;
+    overflow: auto;
 }
 #announcement .modal-body p{
     text-indent: 2em;
@@ -840,7 +842,36 @@
     margin-bottom: 35px;
     text-indent: 2em;
 }
-
+#announcement .modal-body h4{
+    margin-bottom: 35px;
+}
 /* #announcement .modal-dialog{
     margin-top: 312px;
 } */
+
+.easyScroll_scroll_vertical.theme_default{
+    width: 21px !important;
+    background: #f1f1f1 !important;
+}
+.easyScroll_scroll_horizontal.theme_default>.easyScroll_slider, .easyScroll_scroll_vertical.theme_default>.easyScroll_slider{
+    background: #c1c1c1 !important;
+}
+.easyScroll_scroll_horizontal.theme_default .easyScroll_scrollBut, .easyScroll_scroll_vertical.theme_default .easyScroll_scrollBut{
+    width: 21px !important;
+    height: 21px !important;
+    background: url('../image/game/top_03.jpg') !important;
+    color: #f1f1f1 !important;
+}
+.easyScroll_scroll_vertical.theme_default .scrollButBottom{
+    background: url('../image/game/top_06.png') !important;
+}
+.modal-body.easyScroll_container{
+    padding-right: 52px !important;
+}
+.left_top_list.easyScroll_container{
+    padding-right: 41px !important;
+}
+l 
+.left_top_list .easyScroll_scroll_vertical.theme_default{
+    height: 141px !important;
+}
