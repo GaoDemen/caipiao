@@ -2,231 +2,289 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/iconfont.css">
-    <script src="./lib/jquery-1.9.1.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./js/loadFile.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <script src="./lib/jquery-1.9.1.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./js/loadFile.js"></script>
 </head>
 
 <body>
-    <!-- 加载头部文件 -->
-    <div class="header" id="header"> </div>
-    <!-- 轮播图 -->
-    <div id="myCarousel" class="carousel slide">
-        <!-- 轮播（Carousel）指标 -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-        </ol>
-        <!-- 轮播（Carousel）项目 -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="./image/index/baner2.png" alt="First slide">
-            </div>
-            <div class="item">
-                <img src="./image/index/baner2.png" alt="Second slide">
-            </div>
-        </div>
-        <!-- 轮播（Carousel）导航 -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left">
-                <i class="iconfont icon-zuojiantou"></i>
-            </span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right">
-                <i class="iconfont icon-iconfontjiantou4"></i>
-            </span>
-        </a>
-        <!-- 公告 -->
-        <div class="announcement">
-            <div class="announcement_mian">
-                <span> 公告 : </span>
-                <marquee loop="Infinite" scrolldelay="200"> 所有银行充值额度限定最低是100.00元，最高额度限定根据不同银行有不同的标准，具体可以查看相应银行的充值额度限定标准。 </marquee>
-            </div>
-        </div>
+  <!-- 加载头部文件 -->
+  <div class="header" id="header"> </div>
+  <!-- 轮播图 -->
+  <div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="./image/index/baner2.png" alt="First slide">
+      </div>
+      <div class="item">
+        <img src="./image/index/baner2.png" alt="Second slide">
+      </div>
     </div>
-
-    <div class="index_meun">
-        <div class="index_meun_mian">
-            <div class="index_meun_left">
-                <div class="meun_title"> 热门彩种 </div>
-                <ul class="lottery_list">
-                    <li> 重庆时时彩
-                        <i class="new"> </i>
-                    </li>
-                    <li> 山东11选5 </li>
-                    <li> 黑龙江时时彩
-                        <i class="host"></i>
-                    </li>
-                    <li> 天津时时彩 </li>
-                    <li> 广东11选5
-                        <i class="new"> </i>
-                    </li>
-                    <li> 上海11选5</li>
-                    <li> 安徽11选5
-                        <i class="host"> </i>
-                    </li>
-                    <li> 广西11选5 </li>
-                    <li> 激情快3
-                        <i class="host"> </i>
-                    </li>
-                    <li> 河北快3</li>
-
-                    <li> 甘肃快3 </li>
-                    <li> 北京快3
-                        <i class="host"> </i>
-                    </li>
-                    <li> 福彩3D </li>
-                    <li> 腾讯分分彩
-                        <i class="new"></i>
-                    </li>
-                    <li> 极速60秒 </li>
-                    <li> 极速120秒
-                        <i class="new"></i>
-                    </li>
-                    <li> 极速180秒 </li>
-                    <li> 上海时时乐</li>
-                    <li> 重庆时时彩
-                        <i class="host"> </i>
-                    </li>
-                    <li> 山东11选5 </li>
-
-                    <li> 广西11选5 </li>
-                    <li> 安徽11选5 </li>
-                </ul>
-            </div>
-            <div class="index_meun_right">
-                <ul>
-                    <li>
-                        <h3> MG电子 </h3>
-                        <p> 神秘刺激，淘金之旅 </p>
-                        <p class="paly_game"> 开始游戏 </p>
-                        <img src="./image/index/logo1.png" alt="">
-                        <div class="game_modul">
-                            <img class="top" src="./image/index/top.png" alt="">
-                            <img class="bottom" src="./image/index/bottom.png" alt="">
-                            <div class="title">
-                                <h3> MG电子 </h3>
-                                <p> 神秘刺激，淘金之旅 </p>
-                                <p class="paly_game"> 开始游戏 </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3> 电玩城</h3>
-                        <p> 人气爆棚，激情无限 </p>
-                        <p class="paly_game"> 开始游戏 </p>
-                        <img src="./image/index/logo2.png" alt="">
-                        <div class="game_modul">
-                            <img class="top" src="./image/index/top.png" alt="">
-                            <img class="bottom" src="./image/index/bottom.png" alt="">
-                            <div class="title">
-                                <h3> MG电子 </h3>
-                                <p> 神秘刺激，淘金之旅 </p>
-                                <p class="paly_game"> 开始游戏 </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3> AG视讯 </h3>
-                        <p>现场美女，视讯直播 </p>
-                        <p class="paly_game"> 开始游戏 </p>
-                        <img src="./image/index/logo3.png" alt="">
-                        <div class="game_modul">
-                            <img class="top" src="./image/index/top.png" alt="">
-                            <img class="bottom" src="./image/index/bottom.png" alt="">
-                            <div class="title">
-                                <h3> MG电子 </h3>
-                                <p> 神秘刺激，淘金之旅 </p>
-                                <p class="paly_game"> 开始游戏 </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3> AG捕鱼王 </h3>
-                        <p> 畅玩无阻，想玩就玩 </p>
-                        <p class="paly_game"> 开始游戏 </p>
-                        <img src="./image/index/logo4.png" alt="">
-                        <div class="game_modul">
-                            <img class="top" src="./image/index/top.png" alt="">
-                            <img class="bottom" src="./image/index/bottom.png" alt="">
-                            <div class="title">
-                                <h3> MG电子 </h3>
-                                <p> 神秘刺激，淘金之旅 </p>
-                                <p class="paly_game"> 开始游戏 </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3> PT电子</h3>
-                        <p> 最劲爆的奖池现金大奖 </p>
-                        <p class="paly_game"> 开始游戏 </p>
-                        <img src="./image/index/logo5.png" alt="">
-                        <div class="game_modul">
-                            <img class="top" src="./image/index/top.png" alt="">
-                            <img class="bottom" src="./image/index/bottom.png" alt="">
-                            <div class="title">
-                                <h3> MG电子 </h3>
-                                <p> 神秘刺激，淘金之旅 </p>
-                                <p class="paly_game"> 开始游戏 </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3> 沙巴体育 </h3>
-                        <p> 精彩赛事，不容错过 </p>
-                        <p class="paly_game"> 开始游戏 </p>
-                        <img src="./image/index/logo6.png" alt="">
-                        <div class="game_modul">
-                            <img class="top" src="./image/index/top.png" alt="">
-                            <img class="bottom" src="./image/index/bottom.png" alt="">
-                            <div class="title">
-                                <h3> MG电子 </h3>
-                                <p> 神秘刺激，淘金之旅 </p>
-                                <p class="paly_game"> 开始游戏 </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left">
+        <i class="iconfont icon-zuojiantou"></i>
+      </span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right">
+        <i class="iconfont icon-iconfontjiantou4"></i>
+      </span>
+    </a>
+    <!-- 公告 -->
+    <div class="announcement">
+      <div class="announcement_mian">
+        <span> 公告 : </span>
+        <marquee loop="Infinite" scrolldelay="200"> 所有银行充值额度限定最低是100.00元，最高额度限定根据不同银行有不同的标准，具体可以查看相应银行的充值额度限定标准。
+        </marquee>
+      </div>
     </div>
-    <div class="index_footer">
-        <div class="index_footer_main">
-            <ul>
-                <li>
-                    <img src="./image/index/zhuanyefuwu00.png" alt="">
-                    <h3>行业顶级游戏产品 </h3>
-                    <p> 每天提供超过500种不同类别的精彩赛事，涵盖世界范围内主要体育运动。更有真人，彩票，电子游戏等多种娱乐方式选择，让客户拥有完美游戏体验。
-                    </p>
-                </li>
-                <li>
-                    <img src="./image/index/lv_zuanshi_fill.png" alt="">
-                    <h3> VIP级至尊客户服务</h3>
-                    <p> 支持各种终端设备，完美姜蓉PC、移动端。原生态APP让你随时随地、轻松投注。500多名培训有素的客服团队7X24小时在线，确保客户享受最优质的服务。
-                    </p>
-                </li>
-                <li>
-                    <img src="./image/index/renzhengdunpaianquanbaozhangzhibao.png" alt="">
-                    <h3> 合法经营，安全可靠</h3>
-                    <p> 独家开发，采用128位加密技术和严格的安全管理体系，客户资金得到最完善的保障。拥有菲律宾官方监管机构颁发的正规执照，接受政府监管。</p>
-                </li>
-            </ul>
-        </div>
+  </div>
+
+  <div class="index_meun">
+    <div class="index_meun_mian">
+      <div class="index_meun_left">
+        <div class="meun_title"> 热门彩种 </div>
+        <ul class="lottery_list">
+          <li> 重庆时时彩
+            <i class="new"> </i>
+          </li>
+          <li> 山东11选5 </li>
+          <li> 黑龙江时时彩
+            <i class="host"></i>
+          </li>
+          <li> 天津时时彩 </li>
+          <li> 广东11选5
+            <i class="new"> </i>
+          </li>
+          <li> 上海11选5</li>
+          <li> 安徽11选5
+            <i class="host"> </i>
+          </li>
+          <li> 广西11选5 </li>
+          <li> 激情快3
+            <i class="host"> </i>
+          </li>
+          <li> 河北快3</li>
+
+          <li> 甘肃快3 </li>
+          <li> 北京快3
+            <i class="host"> </i>
+          </li>
+          <li> 福彩3D </li>
+          <li> 腾讯分分彩
+            <i class="new"></i>
+          </li>
+          <li> 极速60秒 </li>
+          <li> 极速120秒
+            <i class="new"></i>
+          </li>
+          <li> 极速180秒 </li>
+          <li> 上海时时乐</li>
+          <li> 重庆时时彩
+            <i class="host"> </i>
+          </li>
+          <li> 山东11选5 </li>
+
+          <li> 广西11选5 </li>
+          <li> 安徽11选5 </li>
+        </ul>
+      </div>
+      <div class="index_meun_right">
+        <ul>
+          <li>
+            <h3> MG电子 </h3>
+            <p> 神秘刺激，淘金之旅 </p>
+            <p class="paly_game"> 开始游戏 </p>
+            <img src="./image/index/logo1.png" alt="">
+            <div class="game_modul">
+              <img class="top" src="./image/index/top.png" alt="">
+              <img class="bottom" src="./image/index/bottom.png" alt="">
+              <div class="title">
+                <h3> MG电子 </h3>
+                <p> 神秘刺激，淘金之旅 </p>
+                <p class="paly_game"> 开始游戏 </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h3> 电玩城</h3>
+            <p> 人气爆棚，激情无限 </p>
+            <p class="paly_game"> 开始游戏 </p>
+            <img src="./image/index/logo2.png" alt="">
+            <div class="game_modul">
+              <img class="top" src="./image/index/top.png" alt="">
+              <img class="bottom" src="./image/index/bottom.png" alt="">
+              <div class="title">
+                <h3> MG电子 </h3>
+                <p> 神秘刺激，淘金之旅 </p>
+                <p class="paly_game"> 开始游戏 </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h3> AG视讯 </h3>
+            <p>现场美女，视讯直播 </p>
+            <p class="paly_game"> 开始游戏 </p>
+            <img src="./image/index/logo3.png" alt="">
+            <div class="game_modul">
+              <img class="top" src="./image/index/top.png" alt="">
+              <img class="bottom" src="./image/index/bottom.png" alt="">
+              <div class="title">
+                <h3> MG电子 </h3>
+                <p> 神秘刺激，淘金之旅 </p>
+                <p class="paly_game"> 开始游戏 </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h3> AG捕鱼王 </h3>
+            <p> 畅玩无阻，想玩就玩 </p>
+            <p class="paly_game"> 开始游戏 </p>
+            <img src="./image/index/logo4.png" alt="">
+            <div class="game_modul">
+              <img class="top" src="./image/index/top.png" alt="">
+              <img class="bottom" src="./image/index/bottom.png" alt="">
+              <div class="title">
+                <h3> MG电子 </h3>
+                <p> 神秘刺激，淘金之旅 </p>
+                <p class="paly_game"> 开始游戏 </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h3> PT电子</h3>
+            <p> 最劲爆的奖池现金大奖 </p>
+            <p class="paly_game"> 开始游戏 </p>
+            <img src="./image/index/logo5.png" alt="">
+            <div class="game_modul">
+              <img class="top" src="./image/index/top.png" alt="">
+              <img class="bottom" src="./image/index/bottom.png" alt="">
+              <div class="title">
+                <h3> MG电子 </h3>
+                <p> 神秘刺激，淘金之旅 </p>
+                <p class="paly_game"> 开始游戏 </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <h3> 沙巴体育 </h3>
+            <p> 精彩赛事，不容错过 </p>
+            <p class="paly_game"> 开始游戏 </p>
+            <img src="./image/index/logo6.png" alt="">
+            <div class="game_modul">
+              <img class="top" src="./image/index/top.png" alt="">
+              <img class="bottom" src="./image/index/bottom.png" alt="">
+              <div class="title">
+                <h3> MG电子 </h3>
+                <p> 神秘刺激，淘金之旅 </p>
+                <p class="paly_game"> 开始游戏 </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- 加载尾部文件 -->
-    <div class="footer" id="footer"> </div>
+  </div>
+  <div class="index_footer">
+    <div class="index_footer_main">
+      <ul>
+        <li>
+          <img src="./image/index/zhuanyefuwu00.png" alt="">
+          <h3>行业顶级游戏产品 </h3>
+          <p> 每天提供超过500种不同类别的精彩赛事，涵盖世界范围内主要体育运动。更有真人，彩票，电子游戏等多种娱乐方式选择，让客户拥有完美游戏体验。
+          </p>
+        </li>
+        <li>
+          <img src="./image/index/lv_zuanshi_fill.png" alt="">
+          <h3> VIP级至尊客户服务</h3>
+          <p> 支持各种终端设备，完美姜蓉PC、移动端。原生态APP让你随时随地、轻松投注。500多名培训有素的客服团队7X24小时在线，确保客户享受最优质的服务。
+          </p>
+        </li>
+        <li>
+          <img src="./image/index/renzhengdunpaianquanbaozhangzhibao.png" alt="">
+          <h3> 合法经营，安全可靠</h3>
+          <p> 独家开发，采用128位加密技术和严格的安全管理体系，客户资金得到最完善的保障。拥有菲律宾官方监管机构颁发的正规执照，接受政府监管。</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 加载尾部文件 -->
+  <div class="footer" id="footer"> </div>
+
+  <!-- 公共对话框 -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            温馨提示
+          </h4>
+        </div>
+        <div class="modal-body">
+          <img src="./image/index/err.png" alt="">
+          <p> 手机号用作您的身份认证，便于忘记找回密码，请您认真填
+            写您的手机号 </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            关闭
+          </button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">
+            确定
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 公告框 -->
+  <div class="modal fade" id="announcement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×
+          </button>
+          <h4 class="modal-title" id="myModalLabel">
+            系统公告_棋牌游戏种类公告
+          </h4>
+        </div>
+        <div class="modal-body">
+            <h3> 尊敬的各位会员： </h3> 
+            <p> 为了给大家带来更好的娱乐体验，平台目前已经上线了开元棋牌和761棋牌供大家来娱乐，其中开元棋牌的游戏种类有：极速炸金花、炸金花、德州扑克、三公、二八杠、二十一点、通比牛牛、抢庄牛牛、百人牛牛、斗地主、森林舞会、抢庄牌九、压庄龙虎、百家乐、十三水；761棋牌的游戏种类有：李逵劈鱼、牛牛专区、炸金花、二八杠、欢乐十三秒、飞禽走兽、金蟾捕鱼、德州扑克、百人牛牛、龙虎、奔驰宝马。欢迎大家前来选择自己喜欢的游戏种类进行娱乐，如有任何问题请联系平台在线客服进行咨询，感谢大家长久以来对我们网站的大力支持！ </p>   
+            <h4> 诚信为本，服务至上 ---- 娱乐平台 </h4> 
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
 </body>
 
 </html>
 <script>
-    loadFile('./')
+  loadFile('./')
+
 </script>

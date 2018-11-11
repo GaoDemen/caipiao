@@ -1,406 +1,577 @@
 .cai_header {
-    width: 100%;
-    height: 80px;
-    background: #3c4960;
+  width: 100%;
+  height: 80px;
+  background: #3c4960;
 }
 
 .cai_header_main {
-    width: 1186px;
-    height: 80px;
-    margin: 0 auto;
+  width: 1186px;
+  height: 80px;
+  margin: 0 auto;
 }
 
 .cai_header_main>div {
-    float: left;
+  float: left;
 }
 
 .cai_header_logo img {
-    margin-top: 8.5px;
-    margin-left: 10px;
+  margin-top: 8.5px;
+  margin-left: 10px;
 }
 
 .cai_header_main .cai_header_number {
-    float: right;
+  float: right;
 }
-.cai_header_main .cai_header_number>div{
-    float: left;
+
+.cai_header_main .cai_header_number>div {
+  float: left;
 }
 
 .cai_header_number>div:nth-child(2) span {
-    float: left;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    background-image: -moz-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    background-image: -webkit-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    background-image: -ms-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    width: 49px;
-    height: 49px;
-    text-align: center;
-    line-height: 49px;
-    font-size: 30px;
-    color: #3c4960;
-    margin: 0 2.5px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  background-image: -moz-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  background-image: -webkit-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  background-image: -ms-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  width: 49px;
+  height: 49px;
+  text-align: center;
+  line-height: 49px;
+  font-size: 30px;
+  color: #3c4960;
+  margin: 0 2.5px;
 }
-.cai_header_number>div:nth-child(1){
-    padding-top: 1px;
-    box-sizing: border-box ;
-    margin-top: 15px;
-    margin-right: 18px;
+
+.cai_header_number>div:nth-child(1) {
+  padding-top: 1px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  margin-right: 18px;
 }
-.cai_header_number>div:nth-child(2){
-    margin-top: 15px;
-    margin-right: 23px;
+
+.cai_header_number>div:nth-child(2) {
+  margin-top: 15px;
+  margin-right: 23px;
 }
-.cai_header_number>div:nth-child(3){
-    margin-top: 13.5px;
+
+.cai_header_number>div:nth-child(3) {
+  margin-top: 13.5px;
 }
-.cai_header_number>div:nth-child(1) p{
-    height: 24px;
-    line-height: 24px;
-    color: #ffffff;
-    font-size: 12px;
-    text-align: right; 
+
+.cai_header_number>div:nth-child(1) p {
+  height: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: right;
 }
-.cai_header_number>div:nth-child(3) p:hover{
-    background: #151d2a;
+
+.cai_header_number>div:nth-child(3) p:hover {
+  background: #151d2a;
 }
-.cai_header_number>div:nth-child(1) p span{
-    color: #f6cc49;
+
+.cai_header_number>div:nth-child(1) p span {
+  color: #f6cc49;
+  font-weight: bold;
 }
-.cai_header_number>div:nth-child(3) p{
-    width: 87px;
-    height: 24px;
-    text-align: center;
-    line-height: 24px;
-    color: #ffffff;
-    border-radius: 5px;
-    background: #2a3343;
-    font-size: 12px;
-    cursor: pointer;
+
+.cai_header_number>div:nth-child(3) p {
+  width: 87px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  color: #ffffff;
+  border-radius: 5px;
+  background: #2a3343;
+  font-size: 12px;
+  cursor: pointer;
 }
-.cai_header_number>div:nth-child(3) p:nth-child(2){
-    margin-top: 5px;
+
+.cai_header_number>div:nth-child(3) p:nth-child(2) {
+  margin-top: 5px;
 }
-.cai_header_time_id{
-    margin-left: 95px;
+
+.cai_header_time>div {
+  float: left;
 }
-.cai_header_time_id p{
-    font-size: 12px;
-    color: #ffffff;
+
+.cai_header_time_id {
+  margin-left: 95px;
 }
-.cai_header_time_id p:nth-child(1){
-    margin-top: 20px;
+
+.cai_header_time_id p {
+  font-size: 12px;
+  color: #ffffff;
 }
-.cai_header_time_id p:nth-child(2){
-    margin-top: 5px;
+
+.cai_header_time_id p:nth-child(1) {
+  margin-top: 20px;
+  font-size: 14px;
 }
-.cai_header_time_id p span{
-    color: #f6cc49;
-    font-weight: bold;
+
+.cai_header_time_id p:nth-child(2) {
+  margin-top: 5px;
 }
+
+.cai_header_time_id p span {
+  color: #f6cc49;
+  font-weight: bold;
+}
+
+.cai_header_time .time {
+  margin-top: 16px;
+  margin-left: 14px;
+}
+
+.cai_header_time .time>b {
+  font-size: 18px;
+  line-height: 45px;
+  color: #ffffff;
+  float: left;
+  margin: 0 4px;
+}
+
+.cai_header_time .time span {
+  float: left;
+  width: 28px;
+  height: 45px;
+  background: url('../image/game/timebg.png');
+  margin: 0 4px;
+  position: relative;
+  /* font-weight: bold; */
+
+}
+
+.cai_header_time .time span i {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 25px;
+  height: 21px;
+  background: url('../image/game/timebg2.png');
+  z-index: 1;
+}
+
+.cai_header_time .time span b {
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 36px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
 .cai_content {
-    width: 100%;
-    height: 915px;
-    background: url('../image/game/bg.png');
-    overflow: hidden;
+  width: 100%;
+  height: 915px;
+  background: url('../image/game/bg.png');
+  overflow: hidden;
 }
 
 .cai_main {
-    width: 1186px;
-    height: 875px;
-    margin: 20px auto;
+  width: 1186px;
+  height: 875px;
+  margin: 20px auto;
 }
 
 .cai_main_left {
-    width: 230px;
-    height: 875px;
-    background: #3c4960;
-    float: left;
+  width: 230px;
+  height: 875px;
+  background: #3c4960;
+  float: left;
 }
 
 .cai_main_titile {
-    width: 100%;
-    height: 43px;
-    color: #ffffff;
-    font-weight: bold;
-    text-align: center;
-    line-height: 44px;
-    font-size: 16px;
-    background: #333e52;
+  width: 100%;
+  height: 43px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 44px;
+  font-size: 14px;
+  background: #333e52;
 }
 
 .cai_main_left table {
-    width: 100%;
-    margin-top: 1px;
-    color: #ffffff;
-    text-align: center;
+  width: 100%;
+  margin-top: 1px;
+  color: #ffffff;
+  text-align: center;
 }
 
 .cai_main_left table thead {
-    background: #333e52;
+  background: #333e52;
 }
 
 .cai_main_left thead th {
-    width: 50%;
-    text-align: center;
-    height: 30px;
-    color: #91a2c0;
+  width: 50%;
+  text-align: center;
+  height: 30px;
+  color: #91a2c0;
+  font-size: 12px;
 }
 
 .cai_main_left tbody tr {
-    height: 35px;
-    font-size: 12px;
-    border-bottom: 1px dashed #4b5a75;
+  height: 35px;
+  font-size: 12px;
+  border-bottom: 1px dashed #4b5a75;
 }
 
 .cai_main_left tbody tr span {
-    display: inline-block;
-    margin: 0 4px;
+  display: inline-block;
+  margin: 0 4px;
 }
 
 .cai_main_left tbody tr .active {
-    color: #f6cc49;
+  color: #f6cc49;
 }
 
 .cai_main_left tbody tr:nth-child(1) {
-    height: 10px;
-    border-bottom: 0px dashed #4b5a75;
+  height: 10px;
+  border-bottom: 0px dashed #4b5a75;
 }
 
 .chart {
-    color: #ffffff;
-    font-size: 12px;
-    text-align: center;
-    margin-top: 20px;
-    cursor: pointer;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .cai_main_right {
-    float: left;
-    width: 956px;
-    height: 875px;
-    background: #ececec;
-    box-sizing: border-box;
+  float: left;
+  width: 956px;
+  height: 875px;
+  background: #ececec;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .cai_right_title {
-    background: #ffffff;
-    width: 100%;
-    height: 43px;
-    padding: 0 18px;
-    box-sizing: border-box;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-
+  background: #ffffff;
+  width: 100%;
+  height: 43px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-.cai_right_title li {
-    float: left;
-    height: 43px;
-    line-height: 43px;
-    padding: 0 18px;
-    color: #454545;
-    cursor: pointer;
+.cai_right_gamelist {
+  width: 956px;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 44px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 7px 20px 20px;
+  box-sizing: border-box;
 }
-.cai_right_title li:hover{
-    background-color: #f1f1f1;
+
+.cai_right_gamelist>div {
+  min-height: 20px;
+  margin-top: 10px;
+  position: relative;
 }
-.cai_right_title li.active {
-    background-color: rgb(61, 155, 255);
-    color: #ffffff;
+
+.cai_right_gamelist>div>span {
+  float: left;
+  width: 50px;
+  color: #999999;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.cai_right_gamelist>div>ul {
+  float: left;
+  position: absolute;
+  left: 50px;
+}
+
+.cai_right_gamelist>div>ul>li {
+  float: left;
+  padding: 3px 7px;
+  margin: 0 5px;
+  font-size: 12px;
+  color: #666666;
+  cursor: pointer;
+}
+
+.cai_right_gamelist>div>ul>li.active {
+  border-radius: 5px;
+  background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  color: #ffffff;
+  /* width: 63px;
+        height: 21px; */
+}
+.cai_right_gamelist>div>ul>li:hover{
+    background-color: #f1f1f1;  
+    border-radius: 5px;
+}
+
+.cai_right_title>ul li{
+  float: left;
+  height: 43px;
+  line-height: 43px;
+  padding: 0 18px;
+  color: #454545;
+  cursor: pointer;
+}
+
+.cai_right_title>ul li:hover {
+  background-color: #f1f1f1;
+}
+
+.cai_right_title>ul li.active {
+  background-color: rgb(61, 155, 255);
+  color: #ffffff;
 }
 
 .cai_num {
-    width: 920px;
-    height: 380px;
-    margin: 10px auto;
-    background: #ffffff;
-    border: 1px solid #dbdbdb;
-    box-sizing: border-box;
+  width: 920px;
+  height: 380px;
+  margin: 10px auto;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
 }
 
 .cai_num_title {
-    width: 100%;
-    height: 38px;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 0 20px;
-    line-height: 38px;
-    color: #757575;
-    font-size: 14px;
-    box-sizing: border-box;
+  width: 100%;
+  height: 38px;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0 20px;
+  line-height: 38px;
+  color: #757575;
+  font-size: 14px;
+  box-sizing: border-box;
 }
 
 .cai_num_title>span {
-    float: left;
+  float: left;
 }
 
 .cai_num_title>ul {
-    float: left;
+  float: left;
 }
 
 .cai_num_title>ul>li {
-    float: left;
+  float: left;
 }
 
 .cai_num_main {
-    width: 100%;
-    height: 290px;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 2px 0;
-    box-sizing: border-box;
+  width: 100%;
+  height: 290px;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 2px 0;
+  box-sizing: border-box;
 }
 
 .cai_num_main ul {
-    overflow: hidden;
+  overflow: hidden;
 
 }
 
 .cai_num_main li {
-    float: left;
-    margin-top: 17px;
+  float: left;
+  margin-top: 17px;
 }
 
 .cai_num_main ul li:nth-child(1) {
-    margin-left: 40px;
+  margin-left: 40px;
 }
 
 .cai_num_main ul li:nth-child(1) span {
-    float: left;
-    height: 35px;
-    line-height: 35px;
-    color: #757575;
-    font-size: 14px;
-    margin-right: 15px;
+  float: left;
+  height: 35px;
+  line-height: 35px;
+  color: #757575;
+  font-size: 14px;
+  margin-right: 15px;
 }
 
 .cai_num_main ul li:nth-child(2) span {
-    float: left;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(202, 202, 202);
-    border-radius: 50%;
-    background-image: -moz-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    background-image: -webkit-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    background-image: -ms-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 0.47);
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 35px;
-    color: #454545;
-    font-size: 20px;
-    margin: 0 5px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(202, 202, 202);
+  border-radius: 50%;
+  background-image: -moz-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  background-image: -webkit-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  background-image: -ms-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 0.47);
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 35px;
+  color: #454545;
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+.cai_num_main ul li:nth-child(2) span:hover {
+  background-image: -moz-linear-gradient(90deg, rgb(241, 208, 208) 0%, rgb(255, 255, 255) 65%);
+  background-image: -webkit-linear-gradient(90deg, rgb(241, 208, 208) 0%, rgb(255, 255, 255) 65%);
+  background-image: -ms-linear-gradient(90deg, rgb(241, 208, 208) 0%, rgb(255, 255, 255) 65%);
+  box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 0.47);
 }
 
 .cai_num_main ul li:nth-child(2) span.active {
-    color: #ffffff;
-    border-radius: 50%;
-    background-image: -moz-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
-    background-image: -webkit-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
-    background-image: -ms-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
-    box-shadow: inset 0px -0px 0px 0px rgba(255, 255, 255, 0.47);
-    width: 35px;
-    height: 35px;
-    border-color: rgb(255, 141, 98);
+  color: #ffffff;
+  border-radius: 50%;
+  background-image: -moz-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
+  background-image: -webkit-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
+  background-image: -ms-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
+  box-shadow: inset 0px -0px 0px 0px rgba(255, 255, 255, 0.47);
+  width: 35px;
+  height: 35px;
+  border-color: rgb(255, 141, 98);
 }
 
 .cai_num_main ul li:nth-child(3) {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(207, 207, 207);
-    background-image: -moz-linear-gradient(90deg, rgb(245, 245, 245) 12%, rgb(241, 241, 241) 76%);
-    background-image: -webkit-linear-gradient(90deg, rgb(245, 245, 245) 12%, rgb(241, 241, 241) 76%);
-    background-image: -ms-linear-gradient(90deg, rgb(245, 245, 245) 12%, rgb(241, 241, 241) 76%);
-    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
-    width: 220px;
-    height: 35px;
-    border-radius: 200px;
-    padding: 0 1px;
-    margin-left: 120px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(207, 207, 207);
+  background-image: -moz-linear-gradient(90deg, rgb(245, 245, 245) 12%, rgb(241, 241, 241) 76%);
+  background-image: -webkit-linear-gradient(90deg, rgb(245, 245, 245) 12%, rgb(241, 241, 241) 76%);
+  background-image: -ms-linear-gradient(90deg, rgb(245, 245, 245) 12%, rgb(241, 241, 241) 76%);
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+  width: 220px;
+  height: 35px;
+  border-radius: 200px;
+  padding: 0 1px;
+  margin-left: 120px;
 }
 
 .cai_num_main ul li:nth-child(3) span {
-    float: left;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(202, 202, 202);
-    border-radius: 50%;
-    background-image: -moz-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    background-image: -webkit-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    background-image: -ms-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
-    box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 0.47);
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
-    color: #454545;
-    text-align: center;
-    line-height: 25px;
-    cursor: pointer;
-    margin-left: 8px;
-    margin-top: 4px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(202, 202, 202);
+  border-radius: 50%;
+  background-image: -moz-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  background-image: -webkit-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  background-image: -ms-linear-gradient(90deg, rgb(215, 215, 215) 0%, rgb(255, 255, 255) 65%);
+  box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 0.47);
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  color: #454545;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-top: 4px;
 }
 
 .cai_num_main ul li:nth-child(3) span.active {
-    color: #ffffff;
-    border-radius: 50%;
-    background-image: -moz-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    background-image: -webkit-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    background-image: -ms-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    box-shadow: inset 0px -0px 0px 0px rgba(255, 255, 255, 0.47);
-    border-color: rgb(75, 164, 255);
-    width: 25px;
-    height: 25px;
-    z-index: 181;
+  color: #ffffff;
+  border-radius: 50%;
+  background-image: -moz-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -webkit-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -ms-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  box-shadow: inset 0px -0px 0px 0px rgba(255, 255, 255, 0.47);
+  border-color: rgb(75, 164, 255);
+  width: 25px;
+  height: 25px;
+  z-index: 181;
 }
 
 .cai_num_main ul li:nth-child(3) span:nth-child(1) {
-    margin-left: 9px;
+  margin-left: 9px;
 }
 
 .cai_num_btn {
-    width: 100%;
-    height: 50px;
-    padding: 0 15px 0 20px;
-    box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 15px 0 20px;
+  box-sizing: border-box;
+}
+
+.num_btn_mian span {
+  float: left;
+  font-size: 14px;
+  color: #757575;
+}
+
+.num_btn_mian .title {
+  line-height: 50px;
+}
+
+.num_btn_mian .prizeGroup,
+.money {
+  margin: 8px 20px 0 6px;
+  padding: 6px 5px;
+  border: 1px solid #aaaaaa;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.num_btn_mian i {
+  font-style: normal;
+  margin-left: 8px;
+
+}
+
+.num_btn_mian .prizeGroup .iconfont {
+  color: #000;
+
+}
+
+.num_btn_mian .money .iconfont {
+  color: #000;
+
+
+}
+
+.num_btn_mian span b {
+  color: #f93435;
 }
 
 .cai_num_btn .btn_add {
-    float: right;
+  float: right;
 }
 
 .cai_num_btn .btn_add li {
-    float: left;
-    margin-top: 10px;
-    margin-left: 10px;
-    cursor: pointer;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .cai_num_btn .btn_add li:nth-child(1) {
-    border-radius: 5px;
-    background-image: -moz-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 94, 118) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 94, 118) 100%);
-    background-image: -ms-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 94, 118) 100%);
-    width: 105px;
-    height: 30px;
-    font-size: 14px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 30px;
+  border-radius: 5px;
+  background-image: -moz-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 94, 118) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 94, 118) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 94, 118) 100%);
+  width: 105px;
+  height: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
 }
 
 .cai_num_btn .btn_add li:nth-child(2) {
-    border-radius: 5px;
-    background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    width: 105px;
-    height: 30px;
-    font-size: 14px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 30px;
+  border-radius: 5px;
+  background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  width: 105px;
+  height: 30px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
 }
 
 
@@ -430,80 +601,80 @@
 
 
 .cai_record {
-    width: 920px;
-    height: 220px;
-    margin: 10px auto;
-    background: #ffffff;
-    border: 1px solid #dbdbdb;
-    box-sizing: border-box;
+  width: 920px;
+  height: 220px;
+  margin: 10px auto;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
 }
 
 .cai_record ul {
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid #dbdbdb;
-    box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #dbdbdb;
+  box-sizing: border-box;
 }
 
 .cai_record li {
-    float: left;
-    line-height: 40px;
-    padding: 0 20px;
-    position: relative;
-    color: #454545;
-    border-right: 1px solid #dbdbdb;
-    box-sizing: border-box;
-    cursor: pointer;
+  float: left;
+  line-height: 40px;
+  padding: 0 20px;
+  position: relative;
+  color: #454545;
+  border-right: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .cai_record .active::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 105px;
-    height: 2px;
-    background: #ffffff;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 105px;
+  height: 2px;
+  background: #ffffff;
 }
 
 .cai_record .active::after {
-    content: "";
-    position: absolute;
-    left: -1px;
-    top: 0;
-    width: 106px;
-    height: 2px;
-    background: #3c4960;
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 106px;
+  height: 2px;
+  background: #3c4960;
 }
 
 .cai_record_table {
-    padding: 10px;
-    box-sizing: border-box;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .cai_record_table table {
-    width: 100%;
+  width: 100%;
 }
 
 .cai_record_table thead tr th {
-    color: #515050;
-    font-size: 14px;
-    text-align: center;
-    background: #f2f2f2;
-    height: 33px;
-    line-height: 33px;
+  color: #515050;
+  font-size: 14px;
+  text-align: center;
+  background: #f2f2f2;
+  height: 33px;
+  line-height: 33px;
 }
 
 .cai_record_table tbody td {
-    height: 33px;
-    line-height: 33px;
-    color: #666666;
-    font-size: 12px;
-    text-align: center;
+  height: 33px;
+  line-height: 33px;
+  color: #666666;
+  font-size: 12px;
+  text-align: center;
 }
 
 .cai_record_table tbody tr:nth-child(1) td {
-    height: 15px;
+  height: 15px;
 }
 
 
@@ -524,246 +695,314 @@
 
 
 .cai_btn {
-    width: 920px;
-    height: 185px;
-    margin: 10px auto;
-    /* background: #ffffff; */
-    box-sizing: border-box;
+  width: 920px;
+  height: 185px;
+  margin: 10px auto;
+  /* background: #ffffff; */
+  box-sizing: border-box;
 }
 
 .cai_btn_left {
-    float: left;
-    width: 660px;
-    height: 185px;
-    background: #ffffff;
-    border: 1px solid #dbdbdb;
-    box-sizing: border-box;
-    overflow: hidden;
+  float: left;
+  width: 660px;
+  height: 185px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .cai_btn_left_top {
-    width: 100%;
-    height: 142px;
-    border-bottom: 1px solid #ffffff;
-    box-sizing: border-box;
+  width: 100%;
+  height: 142px;
+  border-bottom: 1px solid #ffffff;
+  box-sizing: border-box;
 }
 
 .cai_btn_left_bottom {
-    width: 100%;
-    height: 43px;
-    background-color: rgb(241, 241, 241);
-    box-sizing: border-box;
-    line-height: 43px;
-    color: #666666;
-    font-size: 14px;
-    padding: 0 20px;
+  width: 100%;
+  height: 43px;
+  background-color: rgb(241, 241, 241);
+  box-sizing: border-box;
+  line-height: 43px;
+  color: #666666;
+  font-size: 14px;
+  padding: 0 20px;
 }
 
 .cai_btn_left_bottom span {
-    font-weight: bold;
-    color: #f93435;
+  font-weight: bold;
+  color: #f93435;
 }
 
 .clear_all {
-    float: right;
-    color: #999999;
-    font-size: 12px;
-    cursor: pointer;
+  float: right;
+  color: #999999;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .left_top_list {
-    float: left;
-    height: 142px;
-    width: 637px;
-    padding: 6px 20px;
-    box-sizing: border-box;
+  float: left;
+  height: 142px;
+  width: 637px;
+  padding: 6px 20px;
+  box-sizing: border-box;
 }
 
 .left_top_list ul {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .left_top_list ul li {
-    width: 100%;
-    height: 30px;
-    border-bottom: 1px dashed #dbdbdb;
-    box-sizing: border-box;
-    font-size: 12px;
-    color: #7f7f7f;
-    line-height: 30px;
-    position: relative;
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px dashed #dbdbdb;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #7f7f7f;
+  line-height: 30px;
+  position: relative;
 }
 
 .left_top_list ul li i {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    font-style: normal;
-    color: #ffffff;
-    width: 15px;
-    height: 15px;
-    font-size: 12px;
-    line-height: 12px;
-    text-align: center;
-    background: #dbdbdb;
-    border-radius: 15px;
-    cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  font-style: normal;
+  color: #ffffff;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  background: #dbdbdb;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .left_top_list ul li span {
-    float: left;
-    width: 66px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  float: left;
+  width: 66px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .left_top_list ul li span:nth-child(1) {
-    width: 105px;
-    margin-right: 20px;
+  width: 105px;
+  margin-right: 20px;
 
 }
 
 .left_top_list ul li span:nth-child(2) {
-    width: 150px;
+  width: 150px;
 }
 
 .left_top_scroll {
-    float: right;
-    background-color: rgb(241, 241, 241);
-    width: 21px;
-    height: 141px;
+  float: right;
+  background-color: rgb(241, 241, 241);
+  width: 21px;
+  height: 141px;
 }
 
 
 .cai_btn_right {
-    float: right;
-    width: 250px;
-    height: 185px;
-    background: #ffffff;
-    border: 1px solid #dbdbdb;
-    box-sizing: border-box;
-    overflow: hidden;
+  float: right;
+  width: 250px;
+  height: 185px;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .cai_btn_right .btn_top {
-    height: 50px;
-    border-bottom: 1px solid #dbdbdb;
-    padding-left: 25px;
-    padding-top: 12px;
-    box-sizing: border-box;
+  height: 50px;
+  border-bottom: 1px solid #dbdbdb;
+  padding-left: 25px;
+  padding-top: 12px;
+  box-sizing: border-box;
 }
 
 .cai_btn_right .btn_top .title {
-    float: left;
-    color: #666666;
-    font-size: 12px;
-    line-height: 27px;
-    margin-right: 5px;
+  float: left;
+  color: #666666;
+  font-size: 12px;
+  line-height: 27px;
+  margin-right: 5px;
 }
 
 .cai_btn_right .btn_top .jian {
-    float: left;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(170, 170, 170);
-    background-image: -moz-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
-    background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
-    background-image: -ms-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
-    width: 25px;
-    height: 25px;
-    color: #757575;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 25px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(170, 170, 170);
+  background-image: -moz-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
+  background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
+  background-image: -ms-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
+  width: 25px;
+  height: 25px;
+  color: #757575;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .cai_btn_right .btn_top .add {
-    float: left;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(170, 170, 170);
-    background-image: -moz-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
-    background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
-    background-image: -ms-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
-    width: 25px;
-    height: 25px;
-    color: #757575;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    line-height: 25px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(170, 170, 170);
+  background-image: -moz-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
+  background-image: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
+  background-image: -ms-linear-gradient(90deg, rgb(255, 255, 255) 3%, rgb(228, 228, 228) 9%, rgb(255, 255, 255) 93%);
+  width: 25px;
+  height: 25px;
+  color: #757575;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 25px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .cai_btn_right .btn_top input {
-    float: left;
-    width: 66px;
-    height: 25px;
-    border-bottom: 1px solid rgb(170, 170, 170);
-    border-top: 1px solid rgb(170, 170, 170);
-    text-align: center;
-    color: #fe5858;
-    font-size: 12px;
+  float: left;
+  width: 66px;
+  height: 25px;
+  border-bottom: 1px solid rgb(170, 170, 170);
+  border-top: 1px solid rgb(170, 170, 170);
+  text-align: center;
+  color: #fe5858;
+  font-size: 12px;
 }
 
 .cai_btn_right .btn {
-    margin-top: 14px;
-    padding: 0 14px;
-    box-sizing: border-box;
+  margin-top: 14px;
+  padding: 0 14px;
+  box-sizing: border-box;
 }
 
 .cai_btn_right .btn span:nth-child(1) {
-    float: left;
-    border-radius: 5px;
-    background-image: -moz-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 92, 117) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 92, 117) 100%);
-    background-image: -ms-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 92, 117) 100%);
-    width: 105px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-    margin-right: 10px;
+  float: left;
+  border-radius: 5px;
+  background-image: -moz-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 92, 117) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 92, 117) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(255, 163, 89) 0%, rgb(255, 92, 117) 100%);
+  width: 105px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .cai_btn_right .btn span:nth-child(2) {
-    float: left;
-    border-radius: 5px;
-    background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
-    width: 105px;
-    height: 50px;
-    line-height: 50px;
-    line-height: 50px;
-    text-align: center;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
+  float: left;
+  border-radius: 5px;
+  background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  width: 105px;
+  height: 50px;
+  line-height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .btn_bottom p {
-    font-size: 12px;
-    text-align: center;
-    color: #666666;
+  font-size: 12px;
+  text-align: center;
+  color: #666666;
 }
 
 .btn_bottom p:nth-child(1) {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .btn_bottom p:nth-child(2) {
-    color: #f93435;
-    font-weight: bold;
-    margin-top: 6px;
+  color: #f93435;
+  font-weight: bold;
+  margin-top: 6px;
+}
+
+
+
+.nav_top_main .lottery_meun{
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 990px;
+  background: #494949;
+  z-index: 99;
+  box-shadow: 3px 3px 20px 3px rgba(0,0,0,0.2);
+  padding: 20px 41px;
+  box-sizing: border-box;
+  display: none;
+}
+.nav_top_main .lottery_meun>div{
+  padding: 10px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #5d5d5d;
+  box-sizing: border-box;
+  position: relative;
+ 
+}
+.nav_top_main .lottery_meun>div:last-child{
+  border-bottom: 0px solid #5d5d5d;
+}
+.nav_top_main .lottery_meun>div>span{
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 81px;
+  height: 27px;
+  text-align: center;
+  background: url('../image/index/meunbg.png');
+  line-height: 27px;
+  color: #ffec6d;
+  font-weight: 600;
+}
+.nav_top_main .lottery_meun>div>ul{
+
+  float: left;
+  min-height: 27px;
+  overflow: hidden;
+  padding-left: 98px;
+}
+.nav_top_main .lottery_meun>div>ul>li{
+  float: left;
+  cursor: pointer;
+  width: 101px;
+  font-size: 12px;
+  line-height: 27px;
+}
+.nav_top_main .lottery_meun>div>ul>li:hover{
+  color: #ffec6d;
+}
+
+
+#Lottery_game dd{
+  position: absolute;
+  right: 20px;
+  bottom: -4px;
+ 
+  width: 18px;
+  height: 9px;
+  background: url('../image/index/more.png');
+  display: none;
 }
