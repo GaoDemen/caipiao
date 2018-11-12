@@ -18,8 +18,8 @@
   <script type="text/javascript" src="./lib/easyscroll.js"></script>
 </head>
 <script>
-  function pageGo(path){
-    window.open(path,'_self')
+  function pageGo(path) {
+    window.open(path, '_self')
   }
 </script>
 
@@ -95,7 +95,7 @@
 
 <script>
 
-  var getUrlKey =  function (name) {
+  var getUrlKey = function (name) {
     return (
       decodeURIComponent(
         (new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(
@@ -105,9 +105,11 @@
     );
   }
 
+
+
+
   $(function () {
     var meunDom = {
-      urlId:getUrlKey('id'),
       title: 'title',
       headerNav: "#headerNav>li",
       contantBox: "#contantBox",
@@ -116,63 +118,169 @@
       footer: "#footer",
       navLogo: ".nav_bottom_main .logo",
       footerLogo: ".footer_main img",
-      LotteryZone:'#Lottery_zone',
-      LotteryZoneDd:'#Lottery_zone dd',
-      lotteryMeun:'.lottery_meun',
-      userCenter:'#user_center',
-      userCenterDd:'#user_center dd',
-      userMeun:'.user_meun',
-      userCenterMeun:'#userCenter_meun li'
+      LotteryZone: '#Lottery_zone',
+      LotteryZoneDd: '#Lottery_zone dd',
+      lotteryMeun: '.lottery_meun',
+      userCenter: '#user_center',
+      userCenterDd: '#user_center dd',
+      userMeun: '.user_meun',
+      userCenterMeun: '#userCenter_meun li',
+      userCenterMeunList: '#userCenterMeunList',
+      userCenterContent: '#userCenterContent'
     }
+
+    var router = function (domLink, domChildLink) {
+
+      switch (domLink) {
+        // 主页
+        case null:
+        case 'home':
+        // 活动
+        case 'active':
+          if (domLink == null) { domLink = 'home' };
+          $(meunDom.contantBox).load('./template/home/' + domLink + '.html', function () {
+
+            $("li[data-link =" + domLink + "]").addClass("active").siblings().removeClass('active');
+
+            var clearClick = setTimeout(function () {
+              clearTimeout(clearClick)
+              $(meunDom.headerNav).on('click', function () {
+                router($(this).attr("data-link"));
+                $("li[data-link =" + domLink + "]").addClass("active").siblings().removeClass('active');
+              })
+            },200)
+
+            if (domLink == "home") {
+              window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0]);
+            } else if (domLink == "active") {
+              window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=' + domLink);
+            }
+          });
+          break;
+        case 'user':
+          $(meunDom.contantBox).load('./template/userCenter/user.html', function () {
+            $(meunDom.userCenterMeunList + " li[data-link =" + domChildLink + "]").parent('ul').show().parent('div').siblings().find("ul").hide()
+            $("li[data-link =" + domChildLink + "]").addClass('active');
+            $(meunDom.userCenterMeunList + ">div").on('click', function () {
+              $(this).find('ul').slideDown('fast').end().siblings().find("ul").slideUp('fast');
+
+            });
+            $(meunDom.userCenterMeunList + ">div>ul>li").on('click', function () {
+              $(meunDom.userCenterMeunList + ">div>ul>li").removeClass("active");
+              $("li[data-link =" + domChildLink + "]").addClass('active');
+              router(getUrlKey('id'), $(this).attr("data-link"));
+
+            })
+            switch (domChildLink) {
+              // 个人中心
+              case 'personalData':
+              case 'changePassword':
+              case 'bindCard':
+              case 'bonusPlay':
+                $(meunDom.userCenterContent).load('./template/userCenter/personaInfo/' + domChildLink + '.html', function () {
+                  window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
+                })
+                break;
+              // 游戏记录
+              case 'queryOrder':
+              case 'chaseRecord':
+              case 'ptRecord':
+              case 'gaRecord':
+              case 'shababRecord':
+              case 'agRecord':
+                $(meunDom.userCenterContent).load('./template/userCenter/gameRecord/' + domChildLink + '.html', function () {
+                  window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
+                })
+                break;
+              // 资金记录
+              case 'withdrawalsRecords':
+              case 'moneyDetail':
+                $(meunDom.userCenterContent).load('./template/userCenter/moneyRecord/' + domChildLink + '.html', function () {
+                  window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
+                })
+                break;
+              // 代理团队
+              case 'vipManagement':
+              case 'vipReport':
+              case 'lowerOrders':
+              case 'preferentiallist':
+                $(meunDom.userCenterContent).load('./template/userCenter/agentTeam/' + domChildLink + '.html', function () {
+                  window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
+                })
+                break;
+              // 信息管理
+              case '':
+                break;
+            }
+          })
+          break;
+        default:
+          $(meunDom.contantBox).load('./template/home/home.html', function () {
+            window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0]);
+          });
+      }
+
+    }
+
+
+
+
+
     $(meunDom.header).load("./template/header.html", function () {
       $(meunDom.navLogo).attr('src', './image/index/logo.png');
+      router(getUrlKey('id'), getUrlKey('childId'))
+      // $(meunDom.headerNav).on('click', function () {
+      //   var domLink = $(this).attr("data-link");
+      //   router(domLink)
+      //   $(this).addClass("active").siblings().removeClass('active');
+      //   // switch (domLink) {
+      //   //   case 'home':
+      //   //     $(meunDom.title).text("首页");
+      //   //     break;
+      //   //   case 'active':
+      //   //     $(meunDom.title).text("优惠活动");
+      //   //     break;
+      //   //   default:
+      //   //     console.log("页面未定义")
+      //   // }
+      //   // if (domLink == 'home') {
+      //   //   $(meunDom.contantBox).load('./template/home/' + domLink + '.html', function () {
+      //   //     window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0]);
+      //   //   });
+      //   // } else if (domLink) {
+      //   //   $(meunDom.contantBox).load('./template/home/' + domLink + '.html', function () {
+      //   //     window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=' + domLink);
+      //   //   });
+      //   // } else {
+      //   //   console.log("页面未定义");
+      //   // }
+      // })
 
-      // 主页路由切换器
-      /* domLink 参数为每个li里面data-link
-         home   主页
-         active 优惠活动
-         class active 切换导航菜单
-      */
-      $(meunDom.userCenterMeun).on('click',function () { 
-        var domLink = $(this).attr("data-link"); 
-        $(meunDom.headerNav).removeClass('active')
-        if(domLink){
-          $(meunDom.contantBox).load('./template/userCenter/user.html',function(){
-            window.history.pushState({time:new Date()},"",window.location.href.split('?')[0]+'?id='+domLink);
-          });
-        }else{
-          console.log("页面未定义");
-        }
-      })
 
+      // $(meunDom.userCenterMeun).on('click', function () {
+      //   var domLink = $(this).attr("data-link");
+      //   $(meunDom.headerNav).removeClass('active')
+      //   if (domLink) {
+      //     $(meunDom.contantBox).load('./template/userCenter/user.html', function () {
+      //       window.history.pushState({ time: new Date() }, "", window.location.href.split('?')[0] + '?id=' + domLink);
+      //       router(domLink)
 
-      $(meunDom.headerNav).on('click', function () {
-        var domLink = $(this).attr("data-link");
-        switch (domLink) {
-          case 'home':
-            $(meunDom.title).text("首页");
-            break;
-          case 'active':
-            $(meunDom.title).text("优惠活动");
-            break;
-          default:
-            console.log("页面未定义") 
-        }
-        $(this).addClass("active").siblings().removeClass('active');
-        if(domLink == 'home'){
-          $(meunDom.contantBox).load('./template/home/' + domLink + '.html',function(){
-            window.history.pushState({time:new Date()},"",window.location.href.split('?')[0]);
-          });
-        }else if(domLink){
-          $(meunDom.contantBox).load('./template/home/' + domLink + '.html',function(){
-              window.history.pushState({time:new Date()},"",window.location.href.split('?')[0]+'?id='+domLink);
-          });
-        }else{
-          console.log("页面未定义");
-        }
-      })
+      //       $(meunDom.userCenterMeunList + ">div").eq(0).find('ul').show().end().siblings().find("ul").hide()
+      //       $(meunDom.userCenterMeunList + ">div").on('click', function () {
+      //         $(this).find('ul').slideDown('fast').end().siblings().find("ul").slideUp('fast')
+      //       });
+
+      //     });
+      //   } else {
+      //     console.log("页面未定义");
+      //   }
+      // })
+
       // 加载默认页面 首页    
-      meunDom.urlId?$("li[data-link ="+ meunDom.urlId +"]").click():$(meunDom.headerNav).eq(0).click();
+
+
+
+      //  ? $("li[data-link =" + meunDom.urlId + "]").click() : $(meunDom.headerNav).eq(0).click();
 
       // hover 菜单显示隐藏
       $(meunDom.LotteryZone).mouseenter(function () {
