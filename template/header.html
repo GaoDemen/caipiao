@@ -4,7 +4,7 @@
       <li> 手机版 </li>
       <li> 线路测速 </li>
     </ul>
-    <ul class="right">
+    <ul class="right" >
       <li> <span> 您好,shiyan2019 </span> <span> 余额:0.0000 <i class="iconfont icon-shuaxin"></i> </span> </li>
       <li data-toggle="modal" data-target="#announcement"> <i class="iconfont icon-informatiom"></i> 消息 ( 0 ) </li>
       <li> 充值 </li>
@@ -13,7 +13,7 @@
       <li id="user_center"> <dd></dd> <i class="iconfont icon-yonghudianji"></i> 账户管理 </li>
       <li data-toggle="modal" data-target="#myModal"> 退出 </li>
     </ul>
-    <div class="user_meun">
+    <div class="user_meun" id="userCenter_meun">
       <div>
         <span> 游戏记录 </span>
         <ul>
@@ -35,7 +35,7 @@
       <div>
         <span> 个人信息 </span>
         <ul>
-          <li> 个人资料 </li>
+          <li data-link="personalData"> 个人资料 </li>
           <li> 密码修改 </li>
           <li> 卡号绑定 </li>
           <li> 玩法奖金 </li>
@@ -57,16 +57,14 @@
 <nav class="nav_bottom">
   <div class="nav_bottom_main">
     <div class="left">
-      <img class="logo" src="" alt="">
+      <!-- <img class="logo" src="" alt=""> -->
     </div>
-    <ul class="right">
-      <li class="active"> 首页 </li>
-      <li id="Lottery_zone"> 彩票专区 <i class="iconfont icon-xiala"></i> <img src="./image/index/new.png" alt="">
-        <dd> </dd>
-      </li>
+    <ul class="right" id="headerNav">
+      <li data-link="home" class="active"> 首页 </li>
+      <li id="Lottery_zone"> 彩票专区 <i class="iconfont icon-xiala"></i> <img src="./image/index/new.png" alt=""><dd> </dd></li>
       <li> 电子棋牌 <i class="iconfont icon-xiala"></i> </li>
       <li> AG真人 </li>
-      <li> 优惠活动 </li>
+      <li data-link="active" > 优惠活动 </li>
       <li> 下载中心 </li>
       <li> 在线客服 </li>
     </ul>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 页面错误 </title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+        body{
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: url('../../image/others/404.png') no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .err_main{
+            width: 888px;
+            height: 420px;
+            background: rgba(0,0,0,0.4);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            display: -ms-flex;
+            display: -ms-flexbox;/*混合版本语法：IE 10*/
+            justify-content: center;
+        }
+        .err_logo{
+            margin-right: 44px;
+            width: 140px;
+            height: 243px;
+            margin-top: 98px;
+        }
+        .err_tip {
+            margin-top: 98px; 
+        }
+        .err_tip img{
+            margin-bottom: 20px;
+        }
+        .err_tip a{
+            display: block;
+            margin-top: 8px;
+            color: #ffffff;
+            width: 136px;
+            height: 32px;
+            border: 1px solid #474747;
+            text-align: center;
+            line-height: 32px;
+            font-size: 14px;
+        }
+        .err_tip a:hover{
+            background: #000000;
+        }
+        .err_tip p{
+            display: block;
+            color: #666666;
+        }
+        .p1{
+           
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .p2{
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="err_main">
+        <img class="err_logo" src="../../image/others/errlogo.png" alt="">
+        <div class="err_tip">
+            <img src="../../image//others/404word.png" alt="">
+            <p class="p1"> 很抱歉，没有找到你请求的页面...</p>
+            <p class="p2"> 您可以点击一下按钮继续访问 </p>
+            <a href="../../index.html"> 返回首页 </a>
+        </div>
+    </div>
+</body>
+</html>

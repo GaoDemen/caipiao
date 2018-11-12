@@ -11,8 +11,8 @@ var server= http.createServer(function(req,res){
     //客户端输入的url，例如如果输入localhost:8888/index.html
     //那么这里的url == /index.html 
 
-    var file = documentRoot + url;
-    console.log(url);
+    var file = (documentRoot + url).split('?')[0];
+
     //E:/PhpProject/html5/websocket/www/index.html 
 
 
@@ -24,11 +24,16 @@ var server= http.createServer(function(req,res){
             二参为读取成功返回的文本内容
     */
         if(err){
-            res.writeHeader(404,{
-                'content-type' : 'text/html;charset="utf-8"'
-            });
-            res.write('<h1>404错误</h1><p>你要找的页面不存在</p>');
-            res.end();
+            // res.writeHeader(404,{
+            //     'content-type' : 'text/html;charset="utf-8"'
+            // });
+            // res.write('./page/other/err.html');
+            // res.end();
+     
+            fs.readFile("./page/other/err.html", "utf8", function (err, data) {
+                if (err) throw err;
+                res.end(data);
+            })
         }else{
             res.writeHeader(200,{
                 // 'content-type' : 'text/html;charset="utf-8"'
@@ -42,6 +47,6 @@ var server= http.createServer(function(req,res){
 
 
 
-}).listen(8888);
+}).listen(8888,'172.16.12.222');
 // .listen(8888,'172.16.12.222');
 console.log('服务器开启成功');
