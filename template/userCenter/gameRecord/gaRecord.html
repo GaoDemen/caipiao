@@ -1,0 +1,69 @@
+
+
+<div class="user_center_mian">
+    <div class="title">
+      <span> GA记录 </span>
+    </div>
+    <div class="conditions">
+      <form class="form-inline" role="form">
+        <ul>
+          <li>
+            <label for=""> 游戏时间： </label>
+            <div class="input-group">
+              <input id="start_date" type="text" class="form-control" placeholder="请输入结束时间">
+              <i class="iconfont icon-rili"> </i>
+            </div>
+            至
+            <div class="input-group">
+              <input id="end_date" type="text" class="form-control" placeholder="请输入结束时间">
+              <i class="iconfont icon-rili"> </i>
+            </div>
+  
+            <button type="button" class="btn btn-primary">
+              搜索
+            </button>
+          </li>
+  
+        </ul>
+  
+  
+      </form>
+    </div>
+  
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th> 彩种 </th>
+            <th> 奖期 </th>
+            <th> 模式 </th>
+            <th> 投注金额(元) </th>
+            <th> 是否追号 </th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> 重庆时时彩 </td>
+            <td> 20191919 </td>
+            <td> 五星直选 </td>
+            <td> 2.00元 </td>
+            <td> 是 </td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table_btn">
+      [1/0] 总计0条记录1 <span> 上一页 </span> <span> 下一页 </span> <span> 首页 </span> <span> 尾页 </span>
+    </div>
+  </div>
+  <script>
+    $('#start_date').dcalendarpicker({
+      format: 'yyyy-mm-dd'
+    });
+    $('#end_date').dcalendarpicker({
+      format: 'yyyy-mm-dd'
+    });
+  
+  </script>

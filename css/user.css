@@ -161,6 +161,9 @@
     cursor: pointer;
     position: relative;
 }
+.user_foote_meun>div li:hover{
+    background: rgb(206, 206, 206);
+}
 .user_foote_meun>div .active{
     box-sizing: border-box;
     border-top: 1px solid #e8e8e8;
@@ -182,7 +185,7 @@
     height: 100%;
 }
 .user_footer_right{
-    padding:35px 40px;
+    padding:15px;
     background: #ffffff;
 }
 
@@ -192,31 +195,158 @@
 
 
 
+/* 公共 */
+.user_center_mian>.title{
+    height: 44px;
+    border-bottom: 3px solid #f5f5f5;
+}  
+.user_center_mian>.title>span{
+    float: left;
+    font-size: 16px;
+    color: #666666;
+    padding: 11px 10px;
+    position: relative;
+}
+.user_center_mian>.title>span::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #128be6;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    z-index: 1;
+}
+.user_center_mian .form-inline>ul{
+    /* overflow: hidden; */
+    height: 27px;
+}
+.user_center_mian .form-inline>ul:not(:nth-child(1)){
+    margin-top: 10px;
+}
+.user_center_mian .form-inline>ul>li{
+    float: left;
+    font-size: 12px;
+    color: #666666;
+    margin-right: 20px;
+}
+.user_center_mian .form-inline>ul>li label{
+    font-size: 12px;
+    font-weight: normal;
+}
+.user_center_mian .form-control{
+    font-size: 12px;
+    color: #333333;
+    padding: 4px 6px;
+    box-sizing: border-box;
+    border: 1px solid #bbbbbb;
+    height: 27px;
+}
+.user_center_mian .input-group-addon{
+    padding:0;
+    height: 27px;
+}
+.user_center_mian .input-group{
+    cursor: pointer;
+    position: relative;
+}
+.user_center_mian .input-group i{
+    position: absolute;
+    right: 6px;
+    top: 3px;
+    z-index: 100;
+}
+.user_center_mian .calendar{
+    z-index: 999;
+}   
+.user_center_mian  .conditions{
+    padding: 13px 10px;
+    margin-top: 15px;
+    background: #ebebeb;
+    border-bottom: 3px solid #128be6;
+}
+.user_center_mian .btn-primary{
+    background: #128be6;
+    font-size: 14px;
+    color: #fff;
+    padding:3px 18px;
+    border: none;
+    margin-left: 15px;
+}   
+.user_center_mian .btn-primary:hover{
+    background: #1d99f8;
+}
+.user_center_mian>.table{
+    font-size: 12px;
+    margin-top: 10px;
+}
+.user_center_mian>.table>table{
+    width: 100%;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    max-height: 281px;
+    overflow: hidden;
+}
+.user_center_mian>.table>table>thead{
+    background: #dfe9f1;
 
-.personal_data h3 i{
-    font-size: 22px;
+}
+
+.user_center_mian>.table>table>thead>tr>th{
+    padding: 11px 10px;
+    color: #333333;
     font-weight: bold;
-    color: #666666;
+    border-right: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
 }
-.personal_data h3{
-    font-size: 20px;
-    color: #666666;
+.user_center_mian>.table>table>tbody>tr>td{
+    color: #333333;
+    padding: 11px 10px;
+    border-right: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
 }
+
+.user_center_mian>.table>table>tbody>tr:nth-child(even){
+    color: #333333;
+    padding: 11px 10px;
+    background: #f3f3f3;
+}
+.user_center_mian .table_btn{
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+}   
+.user_center_mian .table_btn span{
+    cursor: pointer;
+}
+.user_center_mian .table_btn span:hover{
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+/* 个人信息 */
 .personal_username{
-    width: 899px;
-    height: 65px;
+    height: 52px;
     border: 1px solid #e8e8e8;
-    margin-top: 30px;
-    padding: 0 20px;
+    margin-top: 15px;
+    padding: 0 10px;
     color: #666666;
     font-size: 14px;
-    line-height: 65px;
+    line-height: 52px;
 }
 .personal_username span{
     font-weight: bold;
 }
 .personal_username>div{
-    height: 65px;
+    /* height: 65px; */
     float: left;
 }
 .personal_username .username{
@@ -235,22 +365,7 @@
     font-weight: normal;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .personal_ifo{
-    width: 899px;
     height: 165px;
     border: 1px solid #e8e8e8;
     margin-top: 12px;
@@ -276,4 +391,130 @@
 .personal_bank p:nth-child(3){
     margin-top: 13px;
     color: #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 玩法奖金 */
+.bonusPlay>.title{
+    border-color: #128be6;
+    height: 45px;
+}
+.bonusPlay>.title>span{
+    background: #dfdfdf;
+    margin-right: 2px; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    cursor: pointer;
+}
+.bonusPlay>.title>span:hover{
+    background: #c4c4c4;
+}
+.bonusPlay>.title>span.active{
+    background:#128be6;
+    color: #fff;
+}
+.bonusPlay>.title>span::after{
+    width: 0;
+}
+.bonusPlayContent{
+    margin-top: 15px;
+    height: 454px;
+    overflow: hidden;
+}
+.bonusPlayContent>.title{
+    padding: 11px 10px;
+    color: #666666;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+.bonusPlayContent>.title>span:nth-child(1){
+    float: left;
+}
+.bonusPlayContent>.title>span:nth-child(2){
+    float: right;
+   
+}
+.bonusPlayContent .table{
+    height: 393px;
+    overflow: auto;
+}   
+.bonusPlayContent table{
+    display: none;
+}
+.bonusPlayContent thead{
+    background: #dfe9f1;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.bonusPlayContent tbody{
+    color: #666666;
+    font-size: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.bonusPlayContent .gameName{
+    width: 132px;
+    padding: 8px 10px;
+}
+.bonusPlayContent .introduced{
+    width: 644px;
+    padding: 8px 10px;
+}
+.bonusPlayContent .gameMoney{
+    width: 164px;
+    padding: 8px 10px;
+}
+
+.bonusPlayContent tbody .gameName{
+    padding: 20px 10px;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+.bonusPlayContent tbody .introduced{
+    padding: 20px 10px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+.bonusPlayContent tbody .gameMoney{
+    padding: 20px 10px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+.bonusPlayContent tbody tr:nth-child(even){
+    background: #f3f3f3;
+}
+
+
+
+/* 发邮件 */
+.sendBox textarea{
+    height: 200px !important;
+}
+.sendBox form{
+    margin-top: 15px;
+}
+.sendBox label{
+    font-size: 12px;
+    color: #666666;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.sendBox .btn-primary{
+    margin-left: 0;
 }

@@ -19,8 +19,7 @@ var server= http.createServer(function(req,res){
             res.write(data);
             res.end();
         }
-
     });
-}).listen(8888);
+}).listen(8888,'172.16.12.222');
 // .listen(8888,'172.16.12.222');
 console.log('服务器开启成功');
