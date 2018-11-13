@@ -105,9 +105,6 @@
     );
   }
 
-
-
-
   $(function () {
     var meunDom = {
       title: 'title',
@@ -115,6 +112,7 @@
       contantBox: "#contantBox",
       loadFile: "#loadFile",
       header: "#header",
+      headerMeun: "#headerMeun",
       footer: "#footer",
       navLogo: ".nav_bottom_main .logo",
       footerLogo: ".footer_main img",
@@ -126,7 +124,9 @@
       userMeun: '.user_meun',
       userCenterMeun: '#userCenter_meun li',
       userCenterMeunList: '#userCenterMeunList',
-      userCenterContent: '#userCenterContent'
+      userCenterContent: '#userCenterContent',
+      userMoneyMangContent: '#userMoneyMangContent',
+      userMoneyMangMeun: '#userMoneyMangMeun'
     }
 
     var router = function (domLink, domChildLink) {
@@ -134,7 +134,7 @@
         // 主页
         case null:
         case 'home':
-          // 活动
+        // 活动
         case 'active':
           if (domLink == null) {
             domLink = 'home'
@@ -151,6 +151,35 @@
               }, "", window.location.href.split('?')[0] + '?id=' + domLink);
             }
           });
+          break;
+        case 'money':
+          $(meunDom.headerNav).removeClass('active');
+          $(meunDom.contantBox).load('./template/money/money.html', function () {
+
+            switch (domChildLink) {
+              // 充值
+              case 'topUpMoney':
+              // 提款
+              case 'withdrawalsMoney':
+              // 转账
+              case 'transferMoney':
+                $(meunDom.userMoneyMangContent).load('./template/money/management/' + domChildLink + '.html', function () {
+                  $("li[data-link =" + domChildLink + "]").addClass('active').siblings().removeClass('active');
+                  
+                  $(meunDom.userMoneyMangMeun + '>li').on("click", function () {
+                   
+                    $(meunDom.userMoneyMangMeun + '>li').removeClass('active');
+                    $("li[data-link =" + domChildLink + "]").addClass('active');
+                    router(getUrlKey('id'), $(this).attr("data-link"));
+                    $(meunDom.userMoneyMangMeun + '>li').unbind();
+                  })
+                  window.history.pushState({
+                    time: new Date()
+                  }, "", window.location.href.split('?')[0] + '?id=money&childId=' + domChildLink);
+                })
+                break;
+            }
+          })
           break;
         case 'user':
           $(meunDom.headerNav).removeClass('active');
@@ -181,7 +210,7 @@
                     }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
                   })
                 break;
-                // 游戏记录
+              // 游戏记录
               case 'queryOrder':
               case 'chaseRecord':
               case 'ptRecord':
@@ -196,7 +225,7 @@
                     }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
                   })
                 break;
-                // 资金记录
+              // 资金记录
               case 'withdrawalsRecords':
               case 'moneyDetail':
                 $(meunDom.userCenterContent).load('./template/userCenter/moneyRecord/' + domChildLink +
@@ -207,7 +236,7 @@
                     }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
                   })
                 break;
-                // 代理团队
+              // 代理团队
               case 'vipManagement':
               case 'vipReport':
               case 'lowerOrders':
@@ -219,7 +248,7 @@
                     }, "", window.location.href.split('?')[0] + '?id=user&childId=' + domChildLink);
                   })
                 break;
-                // 信息管理
+              // 信息管理
               case 'inBox':
               case 'outBox':
               case 'sendBox':
@@ -249,11 +278,13 @@
       //导航点击
       $(meunDom.headerNav).on('click', function () {
         $(this).attr("data-link") == undefined ? router(null) : router($(this).attr("data-link"));
-      })
+      });
       $(meunDom.userCenterMeun).on('click', function () {
         router('user', $(this).attr("data-link"))
+      });
+      $(meunDom.headerMeun + '>li').on('click', function () {
+        router('money', $(this).attr("data-link"))
       })
-
 
       // hover 菜单显示隐藏
       $(meunDom.LotteryZone).mouseenter(function () {

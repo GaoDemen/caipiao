@@ -1,0 +1,42 @@
+<div class="topUpMoney">
+    <ul class="topUpMoney_ul">
+        <li class="active"> 网银支付 </li>
+        <li> 快捷支付 </li>
+        <li> 银联扫码 </li>
+        <li> 网银转账 </li>
+        <li> 支付宝支付 </li>
+        <li> 京东支付 </li>
+    </ul>
+    <ul class="topUpMoney_btn">
+        <li class="active"> 网银支付YF </li>
+        <li> 网银支付AN </li>
+        <li> 网银支付DB </li>
+    </ul>
+    <div class="topUpMoney_input">
+        <form action="">
+            <div class="form-inline">
+                <label for="">
+                    充值金额
+                </label>
+                <input type="text" class="form-control" placeholder="请输入充值金额">
+                <span class="tip"> 充值范围50~20000元 </span>
+            </div>
+            <div class="topUpMoney_input_btn">
+                <button type="button"> 确认充值 </button>
+            </div>
+        </form>
+    </div>
+    <div class="topUpMoney_footer">
+        <p> 温馨提示 </p>
+        <p> 1.为维护您充值权益和宝贵时间，本平台不支持信用卡充值，建议您避免使用信用卡充值。 </p>
+        <p> 2.请确保您的充值转账信息和截图不泄露给第三人，因充值转账信息或充值截图泄露而导致资金被人冒领，平台概不负责 </p>
+    </div>
+</div>
+<script>
+    $(".topUpMoney_ul>li").on("click", function () {
+        $(this).addClass("active").siblings().removeClass("active")
+    })
+    $(".topUpMoney_btn>li").on("click", function () {
+        $(this).addClass("active").siblings().removeClass("active")
+    })
+</script>
