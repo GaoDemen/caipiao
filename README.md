@@ -17,6 +17,7 @@
 3.JavaScript库 jquery
 4.日历插件 dcalendar.picker
 5.滚动条插件 easyscroll
+6.iconfoot 图标库
 
 # 兼容性
 1.IE>10.2.4  chorme>31 firefox>47 (这里就不枚举了,市面上普通浏览器都兼容,个别除外,例如IE8 9 等)
@@ -27,8 +28,8 @@
 3.404页面 ,ip限制页面在page/other中.
 
 # 启动(完全是为了本地开发搭建的本地环境,你也可以用其他语言搭建你需要的环境)
-# 注意:本项目有load加载,需要发起请求,所以需要在环境中查看
-# 为了方便开发,本地用node简单搭建一个服务器,端口为8888 主要配置在server.js中.
+注意:本项目有load加载,需要发起请求,所以需要在环境中查看
+为了方便开发,本地用node简单搭建一个服务器,端口为8888 主要配置在server.js中.
 1.切到但钱根目录(确保安装node);
 2.npm install
 3.node server.js 
