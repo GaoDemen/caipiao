@@ -90,6 +90,9 @@
 .nav_top_main .left>li:hover {
   color: #f7e6b0;
 }
+.nav_top_main .left>li i{
+  font-size: 12px;
+}
 
 .nav_top_main .left>li:nth-child(2)::after {
   content: '';
@@ -516,9 +519,11 @@
   padding: 0 10px;
   box-sizing: border-box;
   font-size: 12px;
+  overflow: hidden;
+
 }
 
-.lottery_list li:hover {
+.lottery_list li:hover{
   background: rgba(0, 0, 0, 0.2);
   color: #f7e6b0;
 }
@@ -535,6 +540,14 @@
   background-size: cover;
   border-top: 1px solid #282828;
   border-right: 1px solid #282828;
+  overflow: hidden;
+}
+.index_meun_right li img{
+  transition: all 0.6s;
+}
+.index_meun_right li:hover img{
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
 }
 
 .index_meun_right li:nth-child(3) {
@@ -1112,6 +1125,27 @@ color: #999999;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+}
+.userMoneyMang_header li i{
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.userMoneyMang_header li:nth-child(1) i{
+  background: url('../image/index/chongzhi.png');
+  width:20px;
+  height: 20px;
+}
+.userMoneyMang_header li:nth-child(2) i{
+  background: url('../image/index/qianbao.png');
+  width: 20px;
+  height: 16px;
+}
+
+.userMoneyMang_header li:nth-child(3) i{
+  background: url('../image/index/zhuangz.png');
+  width:23px;
+  height: 20px;
 }
 .userMoneyMang_header li.active{
   background: #0877a0;

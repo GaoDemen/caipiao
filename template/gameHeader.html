@@ -1,18 +1,18 @@
 <nav class="nav_top">
   <div class="nav_top_main">
     <ul class="left headerVip">
-      <li> 首页 </li>
-      <li id="Lottery_game"> 彩票游戏 <dd></dd>
+      <li onClick="pageGo('../../index.html')"> 首页 </li>
+      <li id="Lottery_game"> 彩票游戏 <i class="iconfont icon-xiala"></i><dd></dd>
       </li>
-      <li> 真人视讯 </li>
-      <li> 电子游戏 </li>
+      <li onClick="pageGo('../other/err.html')"> 真人视讯 </li>
+      <li onClick="pageGo('../other/err.html')"> 电子游戏 </li>
     </ul>
     <ul class="right">
       <li> <span> 您好,shiyan2019 </span> <span> 余额:0.0000 <i class="iconfont icon-shuaxin"></i> </span> </li>
       <li data-toggle="modal" data-target="#announcement"> <i class="iconfont icon-informatiom"></i> 消息 ( 0 ) </li>
-      <li> 充值 </li>
-      <li> 提款 </li>
-      <li> 转账 </li>
+      <li onClick="pageGo('../../index.html?id=money&childId=topUpMoney')"> 充值 </li>
+      <li onClick="pageGo('../../index.html?id=money&childId=withdrawalsMoney')"> 提款 </li>
+      <li onClick="pageGo('../../index.html?id=money&childId=transferMoney')"> 转账 </li>
       <li id="user_center">
         <dd></dd> <i class="iconfont icon-yonghudianji"></i> 账户管理
       </li>
@@ -96,37 +96,37 @@
       <div>
         <span> 游戏记录 </span>
         <ul>
-          <li> 订单查询 </li>
-          <li> 追号记录 </li>
-          <li> PT记录 </li>
-          <li> GA记录 </li>
-          <li> 沙巴记录 </li>
-          <li> AG记录 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=queryOrder')"> 订单查询 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=chaseRecord')"> 追号记录 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=ptRecord')"> PT记录 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=gaRecord')"> GA记录 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=shababRecord')"> 沙巴记录 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=agRecord')"> AG记录 </li>
         </ul>
       </div>
       <div>
         <span> 资金记录 </span>
         <ul>
-          <li> 提款记录 </li>
-          <li> 资金明细 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=withdrawalsRecords')"> 提款记录 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=moneyDetail')"> 资金明细 </li>
         </ul>
       </div>
       <div>
         <span> 个人信息 </span>
         <ul>
-          <li> 个人资料 </li>
-          <li> 密码修改 </li>
-          <li> 卡号绑定 </li>
-          <li> 玩法奖金 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=personalData')"> 个人资料 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=changePassword')"> 密码修改 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=bindCard')"> 卡号绑定 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=bonusPlay')"> 玩法奖金 </li>
         </ul>
       </div>
       <div>
         <span> 代理团队 </span>
         <ul>
-          <li> 会员管理 </li>
-          <li> 会员报表 </li>
-          <li> 下级订单 </li>
-          <li> 优惠列表 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=vipManagement')"> 会员管理 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=vipReport')"> 会员报表 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=lowerOrders')"> 下级订单 </li>
+          <li onClick="pageGo('../../index.html?id=user&childId=preferentiallist')"> 优惠列表 </li>
         </ul>
       </div>
     </div>

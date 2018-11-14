@@ -17,7 +17,11 @@
   <script src="../../js/loadFile.js"></script>
   <script type="text/javascript" src="../../lib/easyscroll.js"></script>
 </head>
-
+<script>
+  function pageGo(path) {
+    window.open(path, '_self')
+  }
+</script>
 <body>
   <!-- 加载头部文件 -->
   <div class="header" id="header"> </div>
@@ -492,7 +496,7 @@
                     <i> x </i>
                   </li>
                 </ul>
-       
+
 
               </div>
 
@@ -505,6 +509,7 @@
               <span> 20 </span> 注，总金额
               <span> ¥400.00,00 </span>
               <div class="clear_all">
+                <i class="iconfont icon-shanchu1"></i>
                 删除
               </div>
             </div>
@@ -533,8 +538,8 @@
         </div>
         <div class="cai_record">
           <ul>
-            <li data-id='bettingRecord'  class="active"> 投注记录 </li>
-            <li data-id='tracRecord' > 追号记录 </li>
+            <li data-id='bettingRecord' class="active"> 投注记录 </li>
+            <li data-id='tracRecord'> 追号记录 </li>
           </ul>
           <div class="cai_record_table">
             <table id="bettingRecord">
@@ -581,38 +586,38 @@
             </table>
 
             <table id="tracRecord">
-                <thead>
-                  <tr>
-                    <th>游戏 </th>
-                    <th> 玩法 </th>
-                    <th> 期号 </th>
-                    <th> 奖金组 </th>
-                    <th> 开奖号码 </th>
-                    <th> 投注金额 </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td> 重庆时时彩 </td>
-                    <td> 前三直选 </td>
-                    <td> 10256554 </td>
-                    <td> 1960 </td>
-                    <td> 2 | 5| 0 | 3 | 2 </td>
-                    <td> 2元 </td>
-                  </tr>
-                  <tr>
-                    <td> 重庆时时彩 </td>
-                    <td> 前三直选 </td>
-                    <td> 10256554 </td>
-                    <td> 1960 </td>
-                    <td> 2 | 5| 0 | 3 | 2 </td>
-                    <td> 2元 </td>
-                  </tr>
-                </tbody>
-              </table>
+              <thead>
+                <tr>
+                  <th>游戏 </th>
+                  <th> 玩法 </th>
+                  <th> 期号 </th>
+                  <th> 奖金组 </th>
+                  <th> 开奖号码 </th>
+                  <th> 投注金额 </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td> 重庆时时彩 </td>
+                  <td> 前三直选 </td>
+                  <td> 10256554 </td>
+                  <td> 1960 </td>
+                  <td> 2 | 5| 0 | 3 | 2 </td>
+                  <td> 2元 </td>
+                </tr>
+                <tr>
+                  <td> 重庆时时彩 </td>
+                  <td> 前三直选 </td>
+                  <td> 10256554 </td>
+                  <td> 1960 </td>
+                  <td> 2 | 5| 0 | 3 | 2 </td>
+                  <td> 2元 </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -623,10 +628,7 @@
 </body>
 
 </html>
-<script>
-  loadFile('../../', true);
 
-</script>
 <script>
   $(".cai_right_gamelist").hide();
   $(".cai_right_title>ul li").mouseenter(function () {
@@ -650,17 +652,18 @@
 
 </script>
 <script>
-    (function () {
-      $(".simpleBox").jQselectable({
-        style: "simple",
-        show: "slideDown",
-        hide: "fadeOut",
-        showDuration: 150,
-        hideDuration: 150,
-        height: 150,
-        opacity: 1
-      });
-    }());
+  (function () {
+    $(".simpleBox").jQselectable({
+      style: "simple",
+      show: "slideDown",
+      hide: "fadeOut",
+      showDuration: 150,
+      hideDuration: 150,
+      height: 150,
+      opacity: 1
+    });
+  }());
+
 </script>
 <script>
   $(function () {
@@ -676,11 +679,12 @@
 
 <script>
   $("#tracRecord").hide();
-  $(".cai_record li").on('click',function(){
+  $(".cai_record li").on('click', function () {
     $(".cai_record li").removeClass('active');
     $(this).addClass('active');
     id = $(this).attr('data-id');
     $(".cai_record_table table").hide();
-    $("#"+id).show()
+    $("#" + id).show()
   })
+
 </script>

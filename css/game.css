@@ -777,8 +777,14 @@
   color: #999999;
   font-size: 12px;
   cursor: pointer;
-}
 
+}
+.clear_all:hover{
+  color: #666666;
+}
+.clear_all i{
+  vertical-align: middle;
+}
 .left_top_list {
   /* float: left; */
   height: 142px;
