@@ -317,7 +317,7 @@
   /* width: 63px;
         height: 21px; */
 }
-.cai_right_gamelist>div>ul>li:hover{
+.cai_right_gamelist>div>ul>li:not(.active):hover{
     background-color: #f1f1f1;  
     border-radius: 5px;
 }
@@ -663,6 +663,7 @@
   border-right: 1px solid #dbdbdb;
   box-sizing: border-box;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .cai_record .active::before {
@@ -670,7 +671,7 @@
   position: absolute;
   left: 0;
   bottom: -1px;
-  width: 105px;
+  width: 97px;
   height: 2px;
   background: #ffffff;
 }
@@ -680,7 +681,7 @@
   position: absolute;
   left: -1px;
   top: 0;
-  width: 106px;
+  width: 98px;
   height: 2px;
   background: #3c4960;
 }

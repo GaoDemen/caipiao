@@ -146,6 +146,7 @@
   margin: 0 auto;
   height: 75px;
   position: relative;
+  cursor: pointer;
 }
 
 .nav_bottom .lottery_meun {
@@ -1154,8 +1155,8 @@ color: #999999;
 .userMoneyMang_header li.active{
   background: #0877a0;
 }
-.userMoneyMang_header li:hover{
-  background-color: #4fc4ee;
+.userMoneyMang_header li:not(.active):hover{
+  background-color: #3c3e3f;
 }
 .topUpMoney{
   width: 1200px;
@@ -1216,12 +1217,13 @@ color: #999999;
     
 }
 .topUpMoney_btn li:hover{
-  background-color: #4fc4ee;
-  color: #ffffff;
+  background-color: rgb(238, 236, 236);
+  /* color: #ffffff; */
 }
 .topUpMoney_btn li.active{
   background: #2097c3;
   color: #ffffff;
+  border: 0;
 }
 .topUpMoney_input{
   padding: 0 35px;
@@ -1268,7 +1270,7 @@ color: #999999;
     margin-left: 69px;
 }
 .topUpMoney_input_btn button:hover{
-  background-color: rgb(250, 173, 110);
+  background-color: rgb(245, 122, 21);
 }
 .topUpMoney_footer{
   font-size: 12px;
