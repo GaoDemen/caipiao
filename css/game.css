@@ -1,11 +1,12 @@
 .cai_header {
-  width: 100%;
+  /* width: 100%; */
+  min-width: 1200px;
   height: 80px;
   background: #3c4960;
 }
 
 .cai_header_main {
-  width: 1186px;
+  width: 1200px;
   height: 80px;
   margin: 0 auto;
 }
@@ -168,7 +169,7 @@
 }
 
 .cai_content {
-  width: 100%;
+  min-width: 1200px;
   height: 915px;
   background: url('../image/game/bg.png');
   overflow: hidden;

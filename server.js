@@ -7,6 +7,7 @@ var server= http.createServer(function(req,res){
     var url = req.url; 
     var file = (documentRoot + url).split('?')[0];
     fs.readFile( file , function(err,data){
+        console.log(file)
         if(err){
             fs.readFile("./page/other/err.html", "utf8", function (err, data) {
                 if (err) throw err;
