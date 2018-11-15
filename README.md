@@ -18,6 +18,7 @@
 4.日历插件 dcalendar.picker
 5.滚动条插件 easyscroll
 6.iconfoot 图标库
+7.layer 弹框 详情请见 https://www.layui.com/doc/modules/layer.html
 
 # 兼容性
 1.IE>10.2.4  chorme>31 firefox>47 (这里就不枚举了,市面上普通浏览器都兼容,个别除外,例如IE8 9 等)
