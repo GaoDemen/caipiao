@@ -1,92 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> 页面错误 </title>
-    <link rel="stylesheet" href="../../css/common.css">
-    <style>
-        body{
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            background: url('../../image/others/404.png') no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        .err_main{
-            width: 888px;
-            height: 420px;
-            background: rgba(0,0,0,0.4);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-            display: flex;
-            display: -ms-flex;
-            display: -ms-flexbox;/*混合版本语法：IE 10*/
-            justify-content: center;
-        }
-        .err_logo{
-            margin-right: 44px;
-            width: 111px;
-            height: 245px;
-            margin-top: 90px;
-        }
-        .err_tip {
-            margin-top: 90px; 
-        }
 
-        .err_tip a{
-            display: block;
-            margin-top: 30px;
-            color: #ffffff;
-            width: 136px;
-            height: 32px;
-            border: 1px solid #474747;
-            text-align: center;
-            line-height: 32px;
-            font-size: 14px;
-        }
-        .err_tip a:hover{
-            background: #000000;
-        }
-        .err_tip p{
-            display: block;
-            color: #666666;
-        }
-        .err_tip .p1{
-           
-            font-size: 16px;
-            margin-bottom: 30px;
-            color: #ffc400;
-        }
-        .p2{
-            font-size: 14px;
-            line-height: 25px;
-        }
-        .err_tip h1{
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> 页面错误 </title>
+  <link rel="stylesheet" href="../../css/common.css">
+  <style>
+    body {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: url('../../image/others/404.png') no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .err_main {
+      width: 888px;
+      height: 420px;
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      /*新版本语法：chrome 21+*/
+      display: flex;
+      /*新版本语法:opera 12.1,Firefox 22+*/
+      display: -webkit-box;
+      /*老版本语法：Safari,iOS,Android browser,old Webkit browser*/
+      display: -moz-box;
+      /*老版本语法：Firefox(buggy)*/
+      display: -ms-flexbox;
+      /*混合版本语法：IE 10*/
+      display: -ms-flex;
+      display: -ms-flexbox;
+      /*混合版本语法：IE 10*/
+      justify-content: center;
+    }
+
+    .err_logo {
+      margin-right: 44px;
+      width: 111px;
+      height: 245px;
+      margin-top: 90px;
+    }
+
+    .err_tip {
+      margin-top: 90px;
+    }
+
+    .err_tip a {
+      display: block;
+      margin-top: 30px;
+      color: #ffffff;
+      width: 136px;
+      height: 32px;
+      border: 1px solid #474747;
+      text-align: center;
+      line-height: 32px;
+      font-size: 14px;
+    }
+
+    .err_tip a:hover {
+      background: #000000;
+    }
+
+    .err_tip p {
+      display: block;
+      color: #666666;
+    }
+
+    .err_tip .p1 {
+
+      font-size: 16px;
+      margin-bottom: 30px;
+      color: #ffc400;
+    }
+
+    .p2 {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    .err_tip h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+  </style>
 </head>
+
 <body>
-    <div class="err_main">
-        <img class="err_logo" src="../../image/others/xianzhi.png" alt="">
-        <div class="err_tip">
-            <!-- <img src="../../image//others/404word.png" alt=""> -->
-            <h1> 访问限制 </h1>
-            <p class="p1"> 由于您的国家和地区限制，我们无法为您提供服务。给您造成不便，敬请谅解。</p>
-            <p class="p2"> 若有任何疑问，请点击一旁的“在线客服”与我们的7x24小时在线客服取得联系或发送邮件 </p>
-            <p class="p2"> 至我们的客服邮箱Email：caipiao53@gmail.com </p>
-            <a href=""> 在线客服 </a>
-        </div>
+  <div class="err_main">
+    <img class="err_logo" src="../../image/others/xianzhi.png" alt="">
+    <div class="err_tip">
+      <!-- <img src="../../image//others/404word.png" alt=""> -->
+      <h1> 访问限制 </h1>
+      <p class="p1"> 由于您的国家和地区限制，我们无法为您提供服务。给您造成不便，敬请谅解。</p>
+      <p class="p2"> 若有任何疑问，请点击一旁的“在线客服”与我们的7x24小时在线客服取得联系或发送邮件 </p>
+      <p class="p2"> 至我们的客服邮箱Email：caipiao53@gmail.com </p>
+      <a href=""> 在线客服 </a>
     </div>
+  </div>
 </body>
+
 </html>

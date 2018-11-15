@@ -92,7 +92,8 @@
 .nav_top_main .left>li:hover {
   color: #f7e6b0;
 }
-.nav_top_main .left>li i{
+
+.nav_top_main .left>li i {
   font-size: 12px;
 }
 
@@ -439,9 +440,11 @@
 #myCarousel {
   position: relative;
 }
-#contantBox{
+
+#contantBox {
   min-width: 1200px;
 }
+
 .announcement {
   position: absolute;
   bottom: 0;
@@ -530,7 +533,7 @@
 
 }
 
-.lottery_list li:hover{
+.lottery_list li:hover {
   background: rgba(0, 0, 0, 0.2);
   color: #f7e6b0;
 }
@@ -549,10 +552,12 @@
   border-right: 1px solid #282828;
   overflow: hidden;
 }
-.index_meun_right li img{
+
+.index_meun_right li img {
   transition: all 0.6s;
 }
-.index_meun_right li:hover img{
+
+.index_meun_right li:hover img {
   transform: scale(1.2);
   -ms-transform: scale(1.2);
 }
@@ -820,116 +825,58 @@
 }
 
 
-#myModal .modal-title {
-  font-size: 16px;
-  color: #4a4a4b;
-}
-
-#myModal .modal-dialog {
-  width: 427px !important;
-  margin-top: 312px;
-}
-
-#myModal .modal-content {
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-#myModal .modal-header {
-  background: #f8f8f8;
-  border-bottom: 1px solid #eeeeee;
-}
-
-#myModal .modal-footer {
-  padding: 11px;
-  border-top: 1px solid #eeeeee;
-}
-
-#myModal .btn {
-  padding: 3px 11px;
-  font-size: 12px;
-  width: 53px;
-  height: 31px;
-}
-
-#myModal .btn-primary {
-  color: #fff;
-  background-color: #128be6;
-  border-color: #128be6;
-  width: 87px;
-  height: 31px;
-}
-
-#myModal .modal-footer .btn+.btn {
-  margin-left: 2px;
-}
-
-#myModal .modal-header .close {
-  color: #000000 !important;
-}
-
-#myModal .modal-body {
-  padding: 23px 40px;
-  color: #787878;
-  font-size: 12px;
-  line-height: 25px;
-  display: flex;
-  justify-items: center;
-}
-
-#myModal .modal-body img {
-  width: 48px;
-  height: 50px;
-  margin-right: 18px;
-}
 
 
-#announcement .modal-title {
-  color: #4a4a4b;
-  font-size: 16px;
-  padding-left: 10px;
-}
 
-#announcement .modal-dialog {
-  width: 610px;
-  height: 378px;
-  margin-top: 212px;
-}
 
-#announcement .modal-content {
-  border-radius: 0;
-}
 
-#announcement .modal-header {
-  border: 0;
-  box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
 
-#announcement .modal-body {
+
+.layerGonGao {
   margin-top: 3px;
-  background: #f1f1f1;
   padding: 26px 54px 26px 26px;
   font-size: 14px;
   color: #787878;
-  height: 325px;
-  overflow: auto;
 }
 
-#announcement .modal-body p {
+.layerGonGao p {
   text-indent: 2em;
   margin-bottom: 35px;
   line-height: 24px;
+  color: #787878;
 }
 
-#announcement .modal-body h3 {
+.layerGonGao h3 {
   color: #cf1232;
   margin-bottom: 35px;
   text-indent: 2em;
 }
 
-#announcement .modal-body h4 {
+.layerGonGao h4 {
   margin-bottom: 35px;
+}
+
+.layerInfo {
+
+  color: #787878;
+  font-size: 12px;
+  line-height: 25px;
+  /*新版本语法：chrome 21+*/
+  display: flex;
+  /*新版本语法:opera 12.1,Firefox 22+*/
+  display: -webkit-box;
+  /*老版本语法：Safari,iOS,Android browser,old Webkit browser*/
+  display: -moz-box;
+  /*老版本语法：Firefox(buggy)*/
+  display: -ms-flexbox;
+  /*混合版本语法：IE 10*/
+  justify-items: center;
+}
+
+.layerInfo>img {
+  width: 48px;
+  height: 50px;
+  margin-right: 18px;
 }
 
 /* #announcement .modal-dialog{
@@ -1013,7 +960,15 @@ l .left_top_list .easyScroll_scroll_vertical.theme_default {
   padding: 35px 0;
   box-sizing: border-box;
   border-bottom: 1px solid #e6e6e6;
+  /*新版本语法：chrome 21+*/
   display: flex;
+  /*新版本语法:opera 12.1,Firefox 22+*/
+  display: -webkit-box;
+  /*老版本语法：Safari,iOS,Android browser,old Webkit browser*/
+  display: -moz-box;
+  /*老版本语法：Firefox(buggy)*/
+  display: -ms-flexbox;
+  /*混合版本语法：IE 10*/
   display: -ms-flex;
   display: -ms-flexbox;
 }
@@ -1081,18 +1036,18 @@ l .left_top_list .easyScroll_scroll_vertical.theme_default {
 }
 
 .more_activity {
-    display: block;
+  display: block;
   background-color: rgb(237, 237, 237);
-    border-radius: 50px;
-margin: 0 auto;
+  border-radius: 50px;
+  margin: 0 auto;
   width: 384px;
   height: 42px;
-margin-top: 25px;
-font-size: 14px;
-text-align: center;
-line-height: 42px;
-font-size: 14px;
-color: #999999;
+  margin-top: 25px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  color: #999999;
 }
 
 /* 400+154+535= 1089 + 30 +30=1149 -1120 = 29            */
@@ -1111,23 +1066,26 @@ color: #999999;
 
 /* 充值 转账 提现 */
 
-.userMoneyMang{
+.userMoneyMang {
   overflow: hidden;
   width: 100%;
   background: url(../image/user/bg.png);
   background-size: cover;
   background-attachment: fixed;
 }
-.userMoneyMang_main{
+
+.userMoneyMang_main {
   width: 1200px;
   margin: 20px auto;
 }
-.userMoneyMang_header{
-    background: #484b4c;
-    width: 1200px;
-    overflow: hidden;
+
+.userMoneyMang_header {
+  background: #484b4c;
+  width: 1200px;
+  overflow: hidden;
 }
-.userMoneyMang_header li{
+
+.userMoneyMang_header li {
   float: left;
   padding: 19px 40px;
   font-size: 18px;
@@ -1135,49 +1093,58 @@ color: #999999;
   font-weight: bold;
   cursor: pointer;
 }
-.userMoneyMang_header li i{
+
+.userMoneyMang_header li i {
   vertical-align: middle;
   display: inline-block;
   margin-right: 5px;
 }
-.userMoneyMang_header li:nth-child(1) i{
+
+.userMoneyMang_header li:nth-child(1) i {
   background: url('../image/index/chongzhi.png');
-  width:20px;
+  width: 20px;
   height: 20px;
 }
-.userMoneyMang_header li:nth-child(2) i{
+
+.userMoneyMang_header li:nth-child(2) i {
   background: url('../image/index/qianbao.png');
   width: 20px;
   height: 16px;
 }
 
-.userMoneyMang_header li:nth-child(3) i{
+.userMoneyMang_header li:nth-child(3) i {
   background: url('../image/index/zhuangz.png');
-  width:23px;
+  width: 23px;
   height: 20px;
 }
-.userMoneyMang_header li.active{
+
+.userMoneyMang_header li.active {
   background: #0877a0;
 }
-.userMoneyMang_header li:not(.active):hover{
+
+.userMoneyMang_header li:not(.active):hover {
   background-color: #3c3e3f;
 }
-.topUpMoney{
+
+.topUpMoney {
   width: 1200px;
-  background-image: -moz-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(255,255,255) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(255,255,255) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(241,241,241) 0%, rgb(255,255,255) 100%);
+  background-image: -moz-linear-gradient(90deg, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(241, 241, 241) 0%, rgb(255, 255, 255) 100%);
 
 }
-.topUpMoney_ul{
+
+.topUpMoney_ul {
   padding: 0 35px;
   height: 56px;
   border-bottom: 2px solid #d9d9d9;
 }
-.topUpMoney_ul>li.active{
+
+.topUpMoney_ul>li.active {
   color: #3399cc;
 }
-.topUpMoney_ul>li.active::after{
+
+.topUpMoney_ul>li.active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1187,10 +1154,12 @@ color: #999999;
   background: #2097c3;
   z-index: 99;
 }
-.topUpMoney_ul li:hover{
+
+.topUpMoney_ul li:hover {
   color: #3399cc;
 }
-.topUpMoney_ul li{
+
+.topUpMoney_ul li {
   float: left;
   font-size: 14px;
   color: #666666;
@@ -1199,44 +1168,50 @@ color: #999999;
   cursor: pointer;
   position: relative;
 }
-.topUpMoney_btn{
+
+.topUpMoney_btn {
   overflow: hidden;
   margin-top: 23px;
   padding: 0 35px;
 }
-.topUpMoney_btn li{
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(217, 217, 217);
-    border-radius: 3px;
-    background-color: rgb(244, 244, 244);
-    /* width: 106px;
+
+.topUpMoney_btn li {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(217, 217, 217);
+  border-radius: 3px;
+  background-color: rgb(244, 244, 244);
+  /* width: 106px;
     height: 37px; */
-    padding:8px 16px;
-    float: left;
-    color: #666666;
-    font-size: 14px;
-    margin-right: 9px;
-    cursor: pointer;
-    
+  padding: 8px 16px;
+  float: left;
+  color: #666666;
+  font-size: 14px;
+  margin-right: 9px;
+  cursor: pointer;
+
 }
-.topUpMoney_btn li:hover{
+
+.topUpMoney_btn li:hover {
   background-color: rgb(238, 236, 236);
   /* color: #ffffff; */
 }
-.topUpMoney_btn li.active{
+
+.topUpMoney_btn li.active {
   background: #2097c3;
   color: #ffffff;
   border: 0;
 }
-.topUpMoney_input{
+
+.topUpMoney_input {
   padding: 0 35px;
   min-height: 245px;
   margin-top: 42px;
   margin-left: 80px;
   position: relative;
 }
-.topUpMoney_input::after{
+
+.topUpMoney_input::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1245,43 +1220,50 @@ color: #999999;
   height: 1px;
   background: #e9e9e9;
 }
-.topUpMoney_input label{
+
+.topUpMoney_input label {
   font-size: 14px;
   color: #666666;
   font-weight: normal;
 }
-.topUpMoney_input .tip{
+
+.topUpMoney_input .tip {
   font-size: 14px;
   color: #cccccc;
 }
-.topUpMoney_input input{
+
+.topUpMoney_input input {
   margin: 0 10px;
   border-style: solid;
   border-width: 1px;
   border-color: rgb(204, 204, 204);
   border-radius: 3px;
 }
-.topUpMoney_input_btn button{
-    border-radius: 3px;
-    background-color: rgb(244, 133, 42);
-    text-align: center;
-    width: 113px;
-    height: 37px;
-    line-height: 37px;
-    color: #fff;
-    font-size: 14px;
-    margin-top: 20px;
-    margin-left: 69px;
+
+.topUpMoney_input_btn button {
+  border-radius: 3px;
+  background-color: rgb(244, 133, 42);
+  text-align: center;
+  width: 113px;
+  height: 37px;
+  line-height: 37px;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 69px;
 }
-.topUpMoney_input_btn button:hover{
+
+.topUpMoney_input_btn button:hover {
   background-color: rgb(245, 122, 21);
 }
-.topUpMoney_footer{
+
+.topUpMoney_footer {
   font-size: 12px;
-  padding:25px 35px 60px;
+  padding: 25px 35px 60px;
   color: #999999;
   line-height: 22px;
 }
-.topUpMoney_footer p:nth-child(1){
+
+.topUpMoney_footer p:nth-child(1) {
   color: #f4852a;
 }

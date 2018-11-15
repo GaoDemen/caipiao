@@ -6,12 +6,14 @@
     </ul>
     <ul class="right" id="headerMeun">
       <li> <span> 您好,shiyan2019 </span> <span> 余额:0.0000 <i class="iconfont icon-shuaxin"></i> </span> </li>
-      <li data-toggle="modal" data-target="#announcement"> <i class="iconfont icon-informatiom"></i> 消息 ( 0 ) </li>
+      <li onClick="layerAlertGonGao()"> <i class="iconfont icon-informatiom"></i> 消息 ( 0 ) </li>
       <li data-link="topUpMoney"> 充值 </li>
       <li data-link="withdrawalsMoney"> 提款 </li>
       <li data-link="transferMoney"> 转账 </li>
-      <li id="user_center"> <dd></dd> <i class="iconfont icon-yonghudianji"></i> 账户管理 </li>
-      <li data-toggle="modal" data-target="#myModal"> 退出 </li>
+      <li id="user_center">
+        <dd></dd> <i class="iconfont icon-yonghudianji"></i> 账户管理
+      </li>
+      <li onClick="layerAlertInfo()"> 退出 </li>
     </ul>
     <div class="user_meun" id="userCenter_meun">
       <div>
@@ -55,16 +57,18 @@
 </nav>
 
 <nav class="nav_bottom">
-  <div class="nav_bottom_main" >
+  <div class="nav_bottom_main">
     <div class="left" onclick="pageGo('./index.html')">
       <img class="logo" src="" alt="">
     </div>
     <ul class="right" id="headerNav">
       <li data-link="home" class="active"> 首页 </li>
-      <li id="Lottery_zone"> 彩票专区 <i class="iconfont icon-xiala"></i> <img src="./image/index/new.png" alt=""><dd> </dd></li>
+      <li id="Lottery_zone"> 彩票专区 <i class="iconfont icon-xiala"></i> <img src="./image/index/new.png" alt="">
+        <dd> </dd>
+      </li>
       <li> 电子棋牌 <i class="iconfont icon-xiala"></i> </li>
       <li> AG真人 </li>
-      <li data-link="active" > 优惠活动 </li>
+      <li data-link="active"> 优惠活动 </li>
       <li onClick="pageGo('page/other/err.html')"> 下载中心 </li>
       <li onClick="pageGo('page/other/err.html')"> 在线客服 </li>
     </ul>
@@ -144,3 +148,28 @@
     </div>
   </div>
 </nav>
+
+
+<script>
+  function layerAlertGonGao() {
+    layer.open({
+      type: 1,
+      title:'系统公告_棋牌游戏种类公告',
+      area: ['610px', '378px'],
+      content: ' <div  class="layerGonGao" style="width:100%;height:100%"><h3> 尊敬的各位会员： </h3><p>为了给大家带来更好的娱乐体验，平台目前已经上线了开元棋牌和761棋牌供大家来娱乐，其中开元棋牌的游戏种类有：极速炸金花、炸金花、德州扑克、三公、二八杠、二十一点、通比牛牛、抢庄牛牛、百人牛牛、斗地主、森林舞会、抢庄牌九、压庄龙虎、百家乐、十三水；761棋牌的游戏种类有：李逵劈鱼、牛牛专区、炸金花、二八杠、欢乐十三秒、飞禽走兽、金蟾捕鱼、德州扑克、百人牛牛、龙虎、奔驰宝马。欢迎大家前来选择自己喜欢的游戏种类进行娱乐，如有任何问题请联系平台在线客服进行咨询，感谢大家长久以来对我们网站的大力支持！为了给大家带来更好的娱乐体验，平台目前已经上线了开元棋牌和761棋牌供大家来娱乐，其中开元棋牌的游戏种类有：极速炸金花、炸金花、德州扑克、三公、二八杠、二十一点、通比牛牛、抢庄牛牛、百人牛牛、斗地主、森林舞会、抢庄牌九、压庄龙虎、百家乐、十三水；761棋牌的游戏种类有：李逵劈鱼、牛牛专区、炸金花、二八杠、欢乐十三秒、飞禽走兽、金蟾捕鱼、德州扑克、百人牛牛、龙虎、奔驰宝马。欢迎大家前来选择自己喜欢的游戏种类进行娱乐，如有任何问题请联系平台在线客服进行咨询，感谢大家长久以来对我们网站的大力支持！</p><h4> 诚信为本，服务至上 ---- 娱乐平台 </h4></div>'
+    });
+  }
+  // <div class="layerInfo"> <img src="./image/index/err.png" alt=""><p> 手机号用作您的身份认证，便于忘记找回密码，请您认真填 写您的手机号 </p> </div>
+  function layerAlertInfo() {
+    layer.confirm('手机号用作您的身份认证 ', {
+      btn: ['确定','取消'], //按钮
+      title:'提示',
+      icon: 5,
+    }, function (index, layero) { //确定回调
+      layer.msg('你点击了确定按钮');
+    }, function (index) { //取消回调
+      layer.msg('你点击了取消按钮');
+    });
+  }
+
+</script>
