@@ -1,7 +1,7 @@
 # caipiao
 
 # 结构说明
-1.文件夹 bootstrap lib 为基本插件文件 详情请看 #插件
+1.bootstrap lib 为基本插件文件 详情请看 #插件
 2.image 本地静态图片文件
 3.css js 文件夹存放本地需要改动的js css文件
 4.page为页面文件
@@ -26,6 +26,7 @@
 1.主要页面有2个页面 主页(index.html)与投注页面(page/game/caipiao.html);
 2.主要采用jquery load加载页面 ,具体配置在 route.js  (对应元素需要写data-link参数,调到指定加载页面,具体请看相对应的页面和配置);
 3.404页面 ,ip限制页面在page/other中.
+5.所有页面跳转都用winds.open();
 
 # 启动(完全是为了本地开发搭建的本地环境,你也可以用其他语言搭建你需要的环境)
 注意:本项目有load加载,需要发起请求,所以需要在环境中查看
@@ -36,4 +37,7 @@
 4.本地查看 http://localhost:8080/index.html (主页)
 
 
+# 跳转
+1.点首页重庆时时彩 跳转投注页面
+2.其他页面对应文字
 
