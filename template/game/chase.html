@@ -1,0 +1,479 @@
+<div class="chase_title">
+    <ul class="chase_type">
+        <li data-show="#normal_chase" class="chase_type_btn active"> 普通追号 </li>
+        <li data-show="#profits_chase" class="chase_type_btn"> 利润率追号 </li>
+        <li data-show="#double_chase" class="chase_type_btn"> 翻倍追号 </li>
+        <li class="chase_checkbox">
+            <input type="checkbox" checked="checked" id="stopChase">
+            <label for="stopChase"> 中奖后停止追号 </label>
+        </li>
+    </ul>
+</div>
+
+<!-- 普通追号 -->
+<div id="normal_chase" class="bet_chase normal_chase">
+    <ul class="bet_chase_title">
+        <li class="bet_chase_period">
+            <span class="active"> 5期 </span>
+            <span> 10期 </span>
+            <span> 15期 </span>
+            <span> 20期 </span>
+        </li>
+        <li class="input">
+            追号 &nbsp;
+            <input type="text" value="1"> &nbsp;期
+        </li>
+        <li class="input">
+            倍数 &nbsp;
+            <input type="text" value="1"> &nbsp;倍
+        </li>
+    </ul>
+    <div class="bet_table" id="checkBox_chase">
+        <ul>
+            <li class="chase_checkbox">
+                <input checked="checked" type="checkbox">
+                <label for=""> 期号 </label>
+            </li>
+            <li> 倍数 </li>
+            <li> 当前投入 </li>
+            <li> 累计投入 </li>
+        </ul>
+        <div class="bet_table_main">
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input checked="checked" type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 利润追号 -->
+<div id="profits_chase"  class="bet_chase profits_chase">
+    <ul class="bet_chase_title" id="radio_chase">
+        <li class="input chase_checkbox active">
+            <input type="radio" name="option" checked="checked">
+            <label for=""> 全程利润率 </label>
+            <input type="text" value="1"> %
+        </li>
+        <li class="input chase_checkbox">
+            <input type="radio" name="option">
+            <label> 前 </label>
+            <input type="text" value="5"> 期利润率
+            <input type="text" value="100"> % 之后利润率
+            <input type="text" value="5"> %
+        </li>
+        <li class="input active">
+            追号
+            <input type="text" value="1"> 期
+        </li>
+        <li class="input active">
+            倍数
+            <input type="text" value="1"> 倍
+        </li>
+
+        <li class="input chase_checkbox">
+            <input type="radio" name="option">
+            <label> 全程累计利润率元 </label>
+            <input type="text" value="100">
+        </li>
+        <li class="input chase_checkbox">
+            <input type="radio" name="option">
+            <label> 前 </label>
+            <input type="text" value="5"> 期累计利润率
+            <input type="text" value="10"> 元 之后累计利润率
+            <input type="text" value="50"> 元
+        </li>
+        <li class="input btn">
+            生成追号计划
+        </li>
+    </ul>
+    <div class="bet_table" id="checkBox_chase">
+        <ul>
+            <li class="chase_checkbox">
+                <input checked="checked" type="checkbox">
+                <label for=""> 期号 </label>
+            </li>
+            <li> 倍数 </li>
+            <li> 当前投入 </li>
+            <li> 累计投入 </li>
+            <li> 当前奖金 </li>
+            <li> 合计利润 </li>
+            <li> 利润率 </li>
+        </ul>
+        <div class="bet_table_main">
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+                <li> 1940.000 </li>
+                <li> 1938.000 </li>
+                <li> 960600% </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<!-- 翻倍追号 -->
+<div id="double_chase"  class="bet_chase double_chase">
+    <ul class="bet_chase_title">
+        <li class="input">
+            起始倍数
+            <input type="text" value="1"> 倍
+        </li>
+        <li class="input">
+            每隔
+            <input type="text" value="1"> 期
+        </li>
+        <li class="input">
+            倍数X
+            <input type="text" value="1"> 倍
+        </li>
+        <li class="input">
+            追号
+            <input type="text" value="1"> 期
+        </li>
+        <li class="input btn">
+            生成追号计划
+        </li>
+    </ul>
+    <div class="bet_table" id="checkBox_chase">
+        <ul>
+            <li class="chase_checkbox">
+                <input checked="checked" type="checkbox">
+                <label for=""> 期号 </label>
+            </li>
+            <li> 倍数 </li>
+            <li> 当前投入 </li>
+            <li> 累计投入 </li>
+        </ul>
+        <div class="bet_table_main">
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+            <ul>
+                <li class="chase_checkbox">
+                    <input checked="checked" type="checkbox">
+                    <label for=""> 20181117-100 </label>
+                </li>
+                <li>
+                    <input checked="checked" type="text" value="1"> 倍
+                </li>
+                <li> 2.000 </li>
+                <li> 2.000 </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="chase_footer">
+    <button type="button"> 确认投注 </button>
+    <p>共追号总期数：
+        <span> 0 </span> 期，
+        <span> 0 </span> 注，追号总金额：
+        <span> 0 </span> 元</p>
+</div>
+
+
+
+<script>
+    // checkBox 点击切换class名称
+    $("#checkBox_chase>ul input[type='checkbox']").on('click', function () {
+        if ($(this).prop('checked')) {
+            $("#checkBox_chase .bet_table_main input[type='checkbox']").prop('checked', true);
+            $("#checkBox_chase .bet_table_main ul").removeClass('not_choose')
+        } else {
+            $("#checkBox_chase .bet_table_main input[type='checkbox']").prop('checked', false);
+            $("#checkBox_chase .bet_table_main ul").addClass('not_choose')
+        }
+    })
+    $("#checkBox_chase .bet_table_main input[type='checkbox']").on('click', function () {
+        if ($(this).prop('checked')) {
+            $(this).parents('ul').removeClass('not_choose');
+        } else {
+            $(this).parents('ul').addClass('not_choose')
+        }
+    })
+
+    // radio 点击切换class名称
+    $("#radio_chase>li>input[type='radio']").on('click', function () {
+        $("#radio_chase>li>input[type='radio']").parent('li').removeClass('active');
+        if ($(this).prop('checked')) {
+            $(this).parent('li').addClass('active');
+        } else {
+            $(this).parent('li').removeClass('active');
+        }
+    })
+
+    // 切换追号模式
+    $(".chase_type li[data-show]").on('click',function(){
+        $(".bet_chase").hide();
+        $($(this).attr('data-show')).show();
+        $(".chase_type li[data-show]").removeClass("active");
+        $(this).addClass("active")
+    })
+</script>

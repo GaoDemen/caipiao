@@ -353,13 +353,26 @@
   width: 100%;
   height: 38px;
   border-bottom: 1px solid #dbdbdb;
-  padding: 0 20px;
+  padding: 0 12px 0 20px;
   line-height: 38px;
   color: #757575;
   font-size: 14px;
   box-sizing: border-box;
 }
-
+.cai_num_title button{
+  float: right;
+  margin-top: 8px;
+  background-color: rgb(115, 134, 168);
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px 10px;
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.cai_num_title button:hover{
+  background-color: rgb(106, 122, 151);
+}
 .cai_num_title>span {
   float: left;
 }
@@ -423,11 +436,11 @@
   margin-top: 17px;
 }
 
-.cai_num_main ul li:nth-child(1) {
+.cai_num_main>ul>li:nth-child(1) {
   margin-left: 40px;
 }
 
-.cai_num_main ul li:nth-child(1) span {
+.cai_num_main>ul>li:nth-child(1) span {
   float: left;
   height: 35px;
   line-height: 35px;
@@ -436,7 +449,7 @@
   margin-right: 15px;
 }
 
-.cai_num_main ul li:nth-child(2) span {
+.cai_num_main>ul>li:nth-child(2) span {
   float: left;
   border-style: solid;
   border-width: 1px;
@@ -456,14 +469,14 @@
   margin: 0 5px;
 }
 
-.cai_num_main ul li:nth-child(2) span:hover {
+.cai_num_main>ul>li:nth-child(2) span:hover {
   background-image: -moz-linear-gradient(90deg, rgb(241, 208, 208) 0%, rgb(255, 255, 255) 65%);
   background-image: -webkit-linear-gradient(90deg, rgb(241, 208, 208) 0%, rgb(255, 255, 255) 65%);
   background-image: -ms-linear-gradient(90deg, rgb(241, 208, 208) 0%, rgb(255, 255, 255) 65%);
   box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 0.47);
 }
 
-.cai_num_main ul li:nth-child(2) span.active {
+.cai_num_main>ul>li:nth-child(2) span.active {
   color: #ffffff;
   border-radius: 50%;
   background-image: -moz-linear-gradient(-66deg, rgb(255, 141, 98) 0%, rgb(255, 62, 91) 100%);
@@ -475,7 +488,7 @@
   border-color: rgb(255, 141, 98);
 }
 
-.cai_num_main ul li:nth-child(3) {
+.cai_num_main>ul>li:nth-child(3) {
   border-style: solid;
   border-width: 1px;
   border-color: rgb(207, 207, 207);
@@ -490,7 +503,7 @@
   margin-left: 120px;
 }
 
-.cai_num_main ul li:nth-child(3) span {
+.cai_num_main>ul>li:nth-child(3) span {
   float: left;
   border-style: solid;
   border-width: 1px;
@@ -511,7 +524,7 @@
   margin-top: 4px;
 }
 
-.cai_num_main ul li:nth-child(3) span.active {
+.cai_num_main>ul>li:nth-child(3) span.active {
   color: #ffffff;
   border-radius: 50%;
   background-image: -moz-linear-gradient(-38deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
@@ -524,9 +537,98 @@
   z-index: 181;
 }
 
-.cai_num_main ul li:nth-child(3) span:nth-child(1) {
+.cai_num_main>ul>li:nth-child(3) span:nth-child(1) {
   margin-left: 9px;
 }
+
+.cai_num_main>.cai_num_file{
+  padding:0 25px; 
+  margin: 20px 0;
+}
+.cai_num_main>.cai_num_file>textarea{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(219, 219, 219);
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    height: 130px;
+    width: 100%;
+    resize:none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.cai_num_main>.cai_file_btn{
+  padding:0 25px;
+  height: 31px;
+}
+.cai_num_main>.cai_file_btn>.instructions{
+  position: relative;
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
+  color: #757575;
+  line-height: 31px;
+}
+.cai_num_main>.cai_file_btn>.instructions>.more{
+  width: 12px;
+  height: 13px;
+  display: inline-block;
+  background: url(../image/game/more.png);
+  cursor: pointer;
+}
+.cai_num_main>.cai_file_btn>.instructions>.more_detail{
+  position: absolute;
+  right: -336px;
+  top: -4px;
+  background: #ffffff;
+  width: 321px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.41);
+  font-size: 12px;
+  color: #8b8b8b;
+  border-radius: 4px;
+  padding: 12px 15px 15px;
+  box-sizing: border-box;
+  z-index: 101;
+  display: none;
+}
+.cai_num_main>.cai_file_btn>.instructions>.more_detail>p{
+  line-height: 20px;
+}
+.cai_num_main>.cai_file_btn>.instructions>.more_detail>dd{
+  width: 17px;
+  height: 14px;
+  background: url(../image/game/tip_03.png) no-repeat;
+  position: absolute;
+  top: 10px;
+  left: -11px;
+}
+
+.cai_num_main>.cai_file_btn>ul{
+  float: right;
+}
+.cai_num_main>.cai_file_btn>ul>li{
+  margin-top: 0px;
+  background-color: rgb(115, 134, 168);
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  color: #ffffff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.cai_num_main>.cai_file_btn>ul>li:hover{
+  background-color: rgb(106, 122, 151);
+}
+.cai_num_main>.cai_file_btn>ul>li:nth-child(3){
+  margin-left: 31px;
+}
+
+
+
+
+
+
+
 
 .cai_num_btn {
   width: 100%;
@@ -1051,4 +1153,429 @@
   height: 9px;
   background: url('../image/index/more.png');
   display: none;
+}
+
+
+
+
+
+.chase_checkbox {
+  position: relative;
+  padding: 0 15px 0 25px;
+  margin-top: 0;
+  display: inline-block;
+}
+/*
+将初始的checkbox的样式改变
+*/
+.chase_checkbox input[type="checkbox"] {
+  opacity: 0;/*将初始的checkbox隐藏起来*/
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  margin: -6px 0 0 0;
+  top: 50%;
+  left: 3px;
+}
+.chase_checkbox input[type="radio"] {
+  opacity: 0;/*将初始的checkbox隐藏起来*/
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  margin: -6px 0 0 0;
+  top: 50%;
+  left: 3px;
+}
+
+
+/*
+设计新的checkbox，位置
+*/
+.chase_checkbox label:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+  background: #fff;
+  box-sizing: border-box;
+}
+/*
+点击初始的checkbox，将新的checkbox关联起来
+*/
+.chase_checkbox input[type="checkbox"]:checked +label:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  background-color: #8bb8e8;
+  background-image: url('../image/game/choose.png');
+  background-repeat: no-repeat;
+  background-position:3px 5px ;
+}
+.chase_checkbox input[type="radio"]:checked +label:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+
+  background-image: url('../image/game/ridio.png');
+  background-repeat: no-repeat;
+
+  border-radius: 50px;
+}
+
+.chase_checkbox label {
+  cursor: pointer;
+  line-height: 1.2;
+  font-weight: normal;/*改变了rememberme的字体*/
+  margin-bottom: 0;
+  text-align: left;
+
+}
+
+
+body .chase_bet{
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+body .chase_bet .layui-layer-title{
+  color:#fff; 
+  border: none;
+  background-color: rgb(53, 130, 212);
+  height: 49px;
+  line-height: 49px;
+  padding: 0 80px 0 15px;
+  font-size: 14px;
+}
+body .chase_bet .layui-layer-title span{
+  font-size: 14px;
+  color: #fff446;
+  font-weight: bold;
+}
+body .chase_bet .layui-layer-setwin .layui-layer-ico{
+  background: url('../image/game/closed.png') no-repeat;
+  width: 10px;
+  height: 10px
+}
+body .chase_bet .layui-layer-setwin{
+  top: 20px;
+}
+
+
+
+.chase_title{
+  padding: 0 15px;
+}
+.chase_title>.chase_type{
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+.chase_title>.chase_type>.chase_type_btn{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 217);
+    border-radius: 3px;
+    background-color: rgb(244, 244, 244);
+    color: #787878;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+    padding: 7px 22px;
+    margin-right: 10px;
+}
+.chase_title>.chase_type>.chase_type_btn.active{
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 217); */
+    border-color: rgb(53, 130, 212);
+    border-radius: 3px;
+    background-color: rgb(53, 130, 212);
+    color: #fff;
+}
+.chase_title>.chase_type>.chase_type_btn:not(.active):hover{
+  background-color: rgb(236, 235, 235);
+}
+.chase_title>.chase_type>li:nth-child(4){
+  float: right;
+  line-height: 35px;
+  color: #787878;
+  font-size: 14px;
+}
+
+
+
+.chase_footer{
+  overflow: hidden;
+  padding:15px 34px 18px;
+}
+.chase_footer>p{
+  float: right;
+  line-height: 37px;
+  font-size: 14px;
+  color: #666666;
+}
+.chase_footer>p>span{
+  color: #f93435;
+  font-weight: bold;
+}
+
+.chase_footer>button{
+    border-radius: 3px;
+    float: right;
+    background-image: -moz-linear-gradient( 0deg, rgb(255,163,89) 0%, rgb(255,92,117) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(255,163,89) 0%, rgb(255,92,117) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255,163,89) 0%, rgb(255,92,117) 100%);
+    cursor: pointer;
+    width: 113px;
+    height: 37px;
+    font-size: 14px;
+    color: #ffffff;
+    margin-left: 15px;
+}
+/* .bet_chase,.profits_chase{ */
+.bet_chase{
+  padding: 0 15px;
+  display: none;
+}
+.bet_chase>.bet_chase_title{
+  margin: 10px 0;
+  overflow: hidden;
+  padding: 0 9px;
+}
+.bet_chase>.bet_chase_title>li{
+  float: left;
+}
+.bet_chase>.bet_chase_title>.bet_chase_period{
+  overflow: hidden;
+  margin-right: 25px;
+}
+.bet_chase>.bet_chase_title>.bet_chase_period>span{
+    border-right: 1px solid rgb(217, 217, 217);
+    border-top: 1px solid rgb(217, 217, 217);
+    border-bottom: 1px solid rgb(217, 217, 217);
+    background-color: rgb(244, 244, 244);
+    width: 44px;
+    height: 31px;
+    color: #787878;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+    line-height: 29px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.bet_chase>.bet_chase_title>.bet_chase_period>span.active{
+  color: #fff;
+  /* border-color: rgb(53, 130, 212); */
+  background-color: rgb(53, 130, 212);
+}
+.bet_chase>.bet_chase_title>.bet_chase_period>span:not(.active):hover{
+  background-color: rgb(236, 235, 235);
+}
+.bet_chase>.bet_chase_title>.bet_chase_period>span:nth-child(1){
+  border-left: 1px solid rgb(217, 217, 217);
+}
+.bet_chase>.bet_chase_title>.input{
+  overflow: hidden;
+  color: #787878;
+  font-size: 12px;
+  margin-left: 30px;
+}
+.bet_chase>.bet_chase_title>.input>input{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 217);
+    background-color: rgb(244, 244, 244);
+    width: 49px;
+    height: 29px;
+    text-align: center;
+    color: #787878;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.bet_chase>.bet_table{
+  width: 100%;
+  color: #666666;
+  font-size: 12px;
+}
+.bet_chase>.bet_table>ul{
+  overflow: hidden;
+  width: 100%;
+}
+.bet_chase>.bet_table>ul>li{
+  float: left;
+  width: 203px;
+  box-sizing: border-box;
+}
+.bet_chase>.bet_table>ul{
+  background-color: rgb(235, 235, 235);
+  border-bottom: 1px solid #dcdcdc;
+}
+.bet_chase>.bet_table>ul>li{
+  padding: 9px;
+}
+.bet_chase>.bet_table>.bet_table_main{
+  display:block;
+  height:285px;
+  overflow-y:scroll;
+}
+.bet_chase>.bet_table>.bet_table_main>.not_choose{
+  color: #cccccc;
+}
+
+
+.bet_chase>.bet_table>.bet_table_main>ul>li{
+  border-bottom: 1px dashed #dcdcdc;
+  box-sizing: border-box;
+  width: 203px;
+  height: 41px;
+  line-height: 40px;
+  float: left;
+  position: relative;
+  padding: 0 9px;
+}
+
+.bet_chase>.bet_table>.bet_table_main>ul>li>input{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 217);
+    background-color: rgb(244, 244, 244);
+    width: 51px;
+    height: 26px;
+    text-align: center;
+    color: #666666;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.bet_chase .chase_checkbox label:before{
+  left: 9px;
+}
+.bet_chase .chase_checkbox label{
+  margin-left: 24px;
+}
+.bet_chase .chase_checkbox input[type="checkbox"]:checked +label:after{
+  left: 9px;
+}
+.bet_chase .chase_checkbox input[type="checkbox"]{
+  left: 9px;
+}
+
+.profits_chase{
+  /* display: block; */
+  display: none;
+}
+.profits_chase>.bet_table>.bet_table_main>ul>li:nth-child(1){
+  width: 149px;
+}
+.profits_chase>.bet_table>.bet_table_main>ul>li:not(:nth-child(1)){
+  width: 110px;
+}
+.profits_chase>.bet_table>ul>li:nth-child(1){
+  width: 149px;
+}
+.profits_chase>.bet_table>ul>li:not(:nth-child(1)){
+  width: 110px;
+}
+.profits_chase>.bet_chase_title>.input{
+  margin-left: 0px;
+  margin-right: 22px;
+  margin-bottom: 10px;
+}
+.profits_chase>.bet_chase_title>.active{
+  color: #000000;;
+}
+
+.profits_chase>.bet_chase_title>.input.btn {
+  border-radius: 3px;
+  background-color: rgb(139, 184, 232);
+  color: #fff;
+  width: 93px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  cursor: pointer;
+}
+.profits_chase>.bet_chase_title>.input.btn:hover{
+  background-color: rgb(129, 174, 221);
+}
+.profits_chase>.bet_chase_title>.input:nth-child(1){
+  width: 170.56px;
+}
+.profits_chase>.bet_chase_title>.input:nth-child(3){
+ margin-left: 10px;
+}
+.profits_chase>.bet_table>.bet_table_main{
+  height: 247px;
+}
+.profits_chase>.bet_chase_title{
+  margin-bottom: 0;
+}
+.profits_chase>.bet_chase_title>.input>input[type="radio"]{
+  width: 17px;
+  height: 17px;
+}
+.profits_chase .bet_chase_title .chase_checkbox label{
+  margin-left: 22px;
+}
+.profits_chase .bet_chase_title .chase_checkbox label:before{
+  left: 0;
+}
+.profits_chase .bet_chase_title .chase_checkbox{
+  padding: 0;
+}
+.profits_chase .bet_chase_title .chase_checkbox label:before{
+  border-radius: 50px;
+}
+
+
+.double_chase{
+  display: none;
+}
+
+.double_chase>.bet_chase_title>.input.btn {
+  border-radius: 3px;
+  background-color: rgb(139, 184, 232);
+  color: #fff;
+  width: 93px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  cursor: pointer;
+}
+.double_chase>.bet_chase_title>.input.btn:hover{
+  background-color: rgb(129, 174, 221);
+}
+.double_chase>.bet_chase_title>.input{
+  margin-left: 0;
+  margin-right: 30px;
+}
+
+.normal_chase{
+  display: block;
 }
