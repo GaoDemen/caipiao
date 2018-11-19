@@ -125,6 +125,7 @@ $(function () {
             case 'gaRecord':
             case 'shababRecord':
             case 'agRecord':
+            case 'betDetail':
               $(meunDom.userCenterContent).load('./template/userCenter/gameRecord/' + domChildLink +
                 '.html',
                 function () {
