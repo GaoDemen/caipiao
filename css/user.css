@@ -737,3 +737,73 @@
   font-size: 14px;
   padding: 5px 10px;
 }
+
+
+/* 下级开户 */
+.registeLower_ifo>h3>span{
+  margin-right: 50px;
+}
+.registeLower_ifo .chase_checkbox label:before{
+  border-radius: 50px;
+}
+.registeLower_ifo_main{
+  padding: 15px 20px;
+}
+.registeLower_ifo_main .form-inline{
+  margin-bottom: 15px;
+}
+.registeLower_ifo_main .form-inline:last-child{
+  margin-bottom: 0px;
+}
+.registeLower_ifo_main .form-inline label{
+  width: 165px;
+  text-align: right;
+  font-weight: normal;
+}
+.registeLower_ifo_main .form-inline input{
+  width: 250px;
+}
+.registeLower_ifo_main .form-inline span{
+  color: #999999;
+  font-size: 12px;
+}
+.registeLower_ifo>h3>P{
+  float: right;
+}
+.registeLower_ifo>h3>P>span{
+  color: #999999;
+}
+.registeLower_ifo_main{
+  overflow: hidden;
+}
+.registeLower_ifo_main>ul{
+  float: left;
+  width: 50%;
+}
+.registeLower_ifo_main select.form-control{
+  width: 135px;
+}
+.registeLower_btn{
+  padding:20px; 
+  text-align: center;
+  color: #999999;
+}
+.registeLower_btn button{
+  display: inline-block;
+  margin: 0 10px;
+  background: #128be6;
+  padding: 4px 16px;
+  border-radius: 2px;
+  color: #fff;
+}
+.registeLower_btn input{
+  width: 300px !important;
+}
+.registeLower_btn span{
+  color: #128be6;
+  cursor: pointer;
+  margin: 10px;
+}
+.registeLower>.openaccount{
+  display: none;
+}

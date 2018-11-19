@@ -149,6 +149,8 @@ $(function () {
             case 'vipReport':
             case 'lowerOrders':
             case 'preferentiallist':
+            case 'registeLower':
+            
               $(meunDom.userCenterContent).load('./template/userCenter/agentTeam/' + domChildLink + '.html',
                 function () {
                   window.history.pushState({

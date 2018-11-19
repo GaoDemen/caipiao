@@ -40,3 +40,101 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 /*清除浮动*/
 .clearfix { clear: both; *zoom:1;}
 .clearfix:after { display: block; clear: both; content: "\0020"; visibility: hidden; height: 0; }
+
+
+
+
+
+
+
+
+.chase_checkbox {
+    position: relative;
+    padding: 0 15px 0 25px;
+    margin-top: 0;
+    display: inline-block;
+  }
+  /*
+  将初始的checkbox的样式改变
+  */
+  .chase_checkbox input[type="checkbox"] {
+    opacity: 0;/*将初始的checkbox隐藏起来*/
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    margin: -6px 0 0 0;
+    top: 50%;
+    left: 3px;
+  }
+  .chase_checkbox input[type="radio"] {
+    opacity: 0;/*将初始的checkbox隐藏起来*/
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    margin: -6px 0 0 0;
+    top: 50%;
+    left: 3px;
+  }
+  
+  
+  /*
+  设计新的checkbox，位置
+  */
+  .chase_checkbox label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #cccccc;
+    background: #fff;
+    box-sizing: border-box;
+  }
+  /*
+  点击初始的checkbox，将新的checkbox关联起来
+  */
+  .chase_checkbox input[type="checkbox"]:checked +label:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    background-color: #8bb8e8;
+    background-image: url('../image/game/choose.png');
+    background-repeat: no-repeat;
+    background-position:3px 5px ;
+  }
+  .chase_checkbox input[type="radio"]:checked +label:after {
+    position: absolute;
+    display: inline-block;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+  
+    background-image: url('../image/game/ridio.png');
+    background-repeat: no-repeat;
+  
+    border-radius: 50px;
+  }
+  
+  .chase_checkbox label {
+    cursor: pointer;
+    line-height: 1.2;
+    font-weight: normal;/*改变了rememberme的字体*/
+    margin-bottom: 0;
+    text-align: left;
+  
+  }
