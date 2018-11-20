@@ -245,7 +245,10 @@
   margin-top: 20px;
   cursor: pointer;
 }
-.chart:hover{
+.chart a{
+  color: #fff;
+}
+.chart a:hover{
   color: #f7e6b0;
 }
 .cai_main_right {
@@ -813,7 +816,9 @@
   font-size: 12px;
   text-align: center;
 }
-
+.cai_record_table tbody td a{
+  color: #666666;
+}
 .cai_record_table tbody tr:nth-child(1) td {
   height: 15px;
 }

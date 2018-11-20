@@ -1,0 +1,6994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>走势图</title>
+  <link rel="stylesheet" href="../../lib/charts/main.css">
+  <script src="../../lib/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+  <div class="tab-wrap">
+    <div class="tab clearfix">
+      <div class="select-title">
+        <ul class="list clearfix">
+          <li class="active">
+            <a class="item" href="javascript:">
+              重庆时时彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              黑龙江时时彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              新疆时时彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              天津时时彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              体彩P3P5
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              台湾5分彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              腾讯分分彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              北京5分彩
+            </a>
+          </li>
+          <li class="">
+            <a class="item" href="javascript:">
+              泰国30秒彩
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="play-list clearfix">
+
+      <ul class="fl clearfix">
+        <li class="active">
+          <a href="javascript:">定位胆</a>
+        </li>
+        <li >
+          <a href="javascript:">后二</a>
+        </li>
+        <li>
+          <a href="javascript:">前二</a>
+        </li>
+        <li>
+          <a href="javascript:">后三</a>
+        </li>
+        <li>
+          <a href="javascript:">前三</a>
+        </li>
+        <li>
+          <a href="javascript:">中三</a>
+        </li>
+        <li>
+          <a href="javascript:">四星</a>
+        </li>
+        <li>
+          <a href="javascript:">五星</a>
+        </li>
+        <li>
+          <a href="javascript:">不定胆</a>
+        </li>
+        <li>
+          <a href="javascript:">大小单双</a>
+        </li>
+        <li>
+          <a href="javascript:">趣味玩法</a>
+        </li>
+        <li>
+          <a href="javascript:">任选</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="tools-wrap">
+    <h3>
+        后三走势图
+    </h3>
+    <label class="mr20">
+      <input class="chkLine" type="checkbox" checked>
+      <span>显示折线</span>
+    </label>
+    <label class="mr40">
+      <input type="checkbox">
+      <span>不带遗漏</span>
+    </label>
+    <label>
+      <span>显示期数</span>
+      <select name="" id="">
+        <option value="">100期</option>
+        <option value="">50期</option>
+        <option value="">30期</option>
+        <option value="">10期</option>
+      </select>
+    </label>
+  </div>
+  <!--表格-->
+  <div class="table-wrap">
+    <div class="fixed-table-box">
+      <table id="pruebatabla" class="fht-table">
+        <thead>
+          <tr>
+            <th class="fixed" rowspan="2">
+              <span class="w-120">期号</span>
+            </th>
+            <th rowspan="2"><span class="w-120">开奖号码</span></th>
+            <th rowspan="2"><span class="w-60">和值</span></th>
+            <th rowspan="2"><span class="w-60">跨度</span></th>
+            <th rowspan="2"><span class="w-60">组选</span></th>
+            <th rowspan="2"><span class="w-60">牛牛</span></th>
+            <th rowspan="2"><span class="w-60">和大小</span></th>
+            <th rowspan="2"><span class="w-60">和单双</span></th>
+            <th colspan="10"><span>万位</span></th>
+            <th colspan="10"><span>千位</span></th>
+            <th colspan="10"><span>百位</span></th>
+            <th colspan="10"><span>十位</span></th>
+            <th colspan="10"><span>个位</span></th>
+            <th rowspan="2"><span class="w-150">大小</span></th>
+            <th rowspan="2"><span class="w-150">单双</span></th>
+            <th colspan="10"><span>基本号码</span></th>
+            <th colspan="10"><span>跨度走势</span></th>
+            <th rowspan="2"><span class="w-90">大小形态</span></th>
+            <th rowspan="2"><span class="w-90">单双形态</span></th>
+            <th colspan="10"><span>龙虎和</span></th>
+          </tr>
+          <tr>
+            <!--万-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+            <!--千-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+            <!--百-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+            <!--十-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+            <!--个-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+            <!--基本号码-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+
+            <!--跨度走势-->
+            <th><span class="num">0</span></th>
+            <th><span class="num">1</span></th>
+            <th><span class="num">2</span></th>
+            <th><span class="num">3</span></th>
+            <th><span class="num">4</span></th>
+            <th><span class="num">5</span></th>
+            <th><span class="num">6</span></th>
+            <th><span class="num">7</span></th>
+            <th><span class="num">8</span></th>
+            <th><span class="num">9</span></th>
+            <!--龙虎和-->
+            <th><span class="lh">万千</span></th>
+            <th><span class="lh">百万</span></th>
+            <th><span class="lh">万十</span></th>
+            <th><span class="lh">万个</span></th>
+            <th><span class="lh">千百</span></th>
+            <th><span class="lh">千十</span></th>
+            <th><span class="lh">千个</span></th>
+            <th><span class="lh">百十</span></th>
+            <th><span class="lh">百个</span></th>
+            <th><span class="lh">十个</span></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td><span class="cycle black w">3</span></td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20180425-003
+            </td>
+            <td>
+              278458
+            </td>
+            <!--和值-->
+            <td>
+              19
+            </td>
+            <!--跨度-->
+            <td>
+              6
+            </td>
+            <!--组选-->
+            <td>
+              <span class="zu_san"> 组三 </span>
+            </td>
+            <!--牛牛-->
+            <td>
+              杂项
+            </td>
+            <!--和大小-->
+            <td>
+              <span>小</span>
+            </td>
+            <!--和单双-->
+            <td>
+              <span>单</span>
+            </td>
+            <!--万-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td> <span class="cycle black w">9</span></td>
+            <!--千-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">5</td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">
+              <span class="cycle black q">2</span>
+            </td>
+            <td class="bg1">9</td>
+            <!--百-->
+            <td>0</td>
+            <td>1</td>
+            <td>
+              <span class="cycle black b">2</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--十-->
+            <td class="bg1">0</td>
+            <td class="bg1">1</td>
+            <td class="bg1">2</td>
+            <td class="bg1">3</td>
+            <td class="bg1">4</td>
+            <td class="bg1">
+              <span class="cycle black s">2</span>
+            </td>
+            <td class="bg1">6</td>
+            <td class="bg1">7</td>
+            <td class="bg1">8</td>
+            <td class="bg1">9</td>
+            <!--个-->
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+              <span class="cycle black g">2</span>
+            </td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <!--大小-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+
+            <!--基本号码-->
+            <td><span class="cycle black j">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td><span class="cycle black j">6 <i>3</i> </span> </td>
+            <td>7</td>
+            <td><span class="cycle black j">8</span> </td>
+            <td>9</td>
+
+            <!--跨度走势-->
+            <td><span class="cycle black k">1</span> </td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+
+            <!--大小形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>大</span></li>
+                <li><span>小</span></li>
+                <li><span>大</span></li>
+              </ul>
+            </td>
+            <!--单双形态-->
+            <td>
+              <ul class="cell-list clearfix">
+                <li><span>单</span></li>
+                <li><span>双</span></li>
+                <li><span>单</span></li>
+              </ul>
+            </td>
+            <!--龙虎和-->
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle yellow">龙</span>
+            </td>
+            <td>
+              <span class="cycle dark-blue">和</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+            <td>
+              <span class="cycle red">虎</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="../../lib/charts/jquery.CongelarFilaColumna.js"> </script>
+<script src="../../lib/charts/two.js"> </script>
+<script src="../../lib/charts/index.js"> </script>

@@ -807,3 +807,25 @@
 .registeLower>.openaccount{
   display: none;
 }
+
+
+
+/* 投注详情 */
+.betDetail_mian{
+  overflow: hidden;
+}
+.betDetail_mian ul{
+  float: left;
+  width: 50%;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.betDetail_mian ul li {
+  padding: 5px 0;
+}
+.betDetail_mian ul li span:nth-child(1){
+  color: #666666;
+}
+.betDetail_mian ul li span:nth-child(2){
+  color: #999999;
+}
