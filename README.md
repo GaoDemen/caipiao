@@ -7,13 +7,15 @@
 4.page为页面文件
 5.template为页面组件文件
    5-1  userCenter 个人中心相关文件夹
+        添加 chaseBet 追号详情页面
+        添加 betDetail 投注详情页面
    5-2  money 充值 提款 等相关页面
    5-3  game 游戏相关页面
 
 6.index.html 入口文件(主页)  
 7.login.html 为登录页面
 8.server.js node搭建本地环境文件 详情请看 #启动 (如果用php等其他语言 这个完全没有必要看,完全是为了本地开发)
-
+9.特别说明\page\game\charts.html 下为走势图页面
 
 # 插件
 1.动画库 animate
