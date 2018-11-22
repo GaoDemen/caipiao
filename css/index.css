@@ -1,3 +1,29 @@
+/* scale */
+@keyframes scale {
+  0% {
+    transform: scale(.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(.6);
+    opacity: 0.4;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 .nav_top {
   /* width: 100%; */
   min-width: 1200px;
@@ -306,7 +332,7 @@
 
 .nav_bottom_main>ul>li {
   float: left;
-  line-height: 75px;
+  line-height: 76px;
   cursor: pointer;
   position: relative;
   font-size: 16px;
@@ -341,6 +367,46 @@
   transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
+
+.nav_bottom_main>ul>.e_game>.e_game_meun {
+  position: absolute;
+  top: 75px;
+  left: 0%;
+  z-index: 99;
+  background: #494949;
+  box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.2);
+  padding: 0 24px;
+  width: 128px;
+  display: none;
+}
+
+.nav_bottom_main>ul>.e_game:hover>.e_game_meun {
+  display: block;
+}
+
+.nav_bottom_main>ul>.e_game>.e_game_meun li {
+  border-bottom: 1px solid #5d5d5d;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.nav_bottom_main>ul>.e_game>.e_game_meun li:last-child {
+  border-bottom: none;
+}
+
+.nav_bottom_main>ul>.e_game>.e_game_meun a {
+  font-size: 12px;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_bottom_main>ul>.e_game>.e_game_meun a:hover {
+  color: #f7e6b0;
+}
+
 
 /* .nav_bottom_main .right>li::after {
     content: '';
@@ -863,12 +929,7 @@
   line-height: 25px;
   /*新版本语法：chrome 21+*/
   display: flex;
-  /*新版本语法:opera 12.1,Firefox 22+*/
-  display: -webkit-box;
-  /*老版本语法：Safari,iOS,Android browser,old Webkit browser*/
-  display: -moz-box;
-  /*老版本语法：Firefox(buggy)*/
-  display: -ms-flexbox;
+  display: -ms-flex;
   /*混合版本语法：IE 10*/
   justify-items: center;
 }
@@ -962,15 +1023,7 @@ l .left_top_list .easyScroll_scroll_vertical.theme_default {
   border-bottom: 1px solid #e6e6e6;
   /*新版本语法：chrome 21+*/
   display: flex;
-  /*新版本语法:opera 12.1,Firefox 22+*/
-  display: -webkit-box;
-  /*老版本语法：Safari,iOS,Android browser,old Webkit browser*/
-  display: -moz-box;
-  /*老版本语法：Firefox(buggy)*/
-  display: -ms-flexbox;
-  /*混合版本语法：IE 10*/
   display: -ms-flex;
-  display: -ms-flexbox;
 }
 
 /* .activity_main_list li:last-child {
@@ -1266,4 +1319,257 @@ l .left_top_list .easyScroll_scroll_vertical.theme_default {
 
 .topUpMoney_footer p:nth-child(1) {
   color: #f4852a;
+}
+
+
+
+
+/* 下载中心 */
+.download {
+  background: url('../image/download/bgdownload.png');
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.download_main {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.download_main_left {
+  float: left;
+  width: 390px;
+  margin-top: 63px;
+}
+
+.download_main_left>h1 {
+  font-size: 48px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.download_main_left>p {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.download_main_left>.img {
+  margin-top: 50px;
+  margin-bottom: 17px;
+  margin-left: 55px;
+  overflow: hidden;
+}
+
+.download_main_left>.img>img {
+  width: 120px;
+  height: 120px;
+}
+
+.download_main_left>.img>img:nth-child(2) {
+  margin-left: 68px;
+}
+
+.download_main_left>.download_main_btn {
+  overflow: hidden;
+}
+
+.download_main_left>.download_main_btn>a {
+  background-image: -moz-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(75, 164, 255) 0%, rgb(143, 121, 255) 100%);
+  width: 170px;
+  height: 41px;
+  border-radius: 41px;
+  float: left;
+  color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 38px;
+  margin-left: 25px;
+}
+
+.download_main_left>.download_main_btn>a>img {
+  line-height: 34px;
+  margin-right: 5px;
+}
+
+.download_main_right {
+  float: right;
+  width: 603px;
+  height: 721px;
+  background: url('../image/download/iphone01.png');
+  position: relative;
+}
+
+.download_main_right>div {
+  position: absolute;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.122);
+  border-radius: 50%;
+  width: 103px;
+  height: 103px;
+}
+
+.download_main_right>div>span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100%;
+  font-size: 18px;
+  color: #ffffff;
+  -webkit-animation: scale 1.8s linear 0s infinite alternate;
+  animation: scale 1.8s linear 0s infinite alternate;
+  z-index: 9;
+}
+
+.download_main_right>.dowload_caipiao {
+  padding: 10px;
+  left: 188px;
+  top: 54px;
+}
+
+.download_main_right>.dowload_caipiao>span {
+  background-color: rgb(230, 64, 78);
+  line-height: 81px;
+}
+
+.download_main_right>.dowload_baobiao {
+  width: 128px;
+  height: 128px;
+  padding: 16px;
+  right: 20px;
+  top: 221px;
+}
+
+.download_main_right>.dowload_baobiao>span {
+  background: #59c9ba;
+  line-height: 89px;
+}
+
+.download_main_right>.dowload_zhuihao {
+  bottom: 364px;
+  left: 38px;
+  width: 77px;
+  height: 77px;
+  padding: 10px;
+}
+
+.download_main_right>.dowload_zhuihao>span {
+  background: #ff9813;
+  line-height: 51px;
+}
+
+
+
+.download_main_right>.dowload_touzhu {
+  bottom: 212px;
+  left: 29px;
+  width: 121px;
+  height: 121px;
+  padding: 14px;
+}
+
+.download_main_right>.dowload_touzhu>span {
+  background: #4a95ff;
+  line-height: 90px;
+}
+
+.download_main_right>.dowload_chonzhi {
+  bottom: 199px;
+  right: 167px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.download_main_right>.dowload_chonzhi>span {
+  background: #cc40ef;
+  line-height: 77px;
+}
+
+
+
+/* 关于我们页面 */
+.aboutMeun {
+  background: url('../image/game/bg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.aboutMeun_main {
+  width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  min-height: 647px;
+  display: -ms-flex;
+}
+
+.aboutMeun_main_meun {
+  background-color: rgb(55, 57, 58);
+  width: 230px;
+  padding: 20px 0;
+}
+
+.aboutMeun_main_meun>ul>li{
+  color: #ffffff;
+  font-size: 14px;
+  padding: 13px 0;
+  padding-left: 65px;
+  cursor: pointer;
+  position: relative;
+}
+.aboutMeun_main_meun>ul>li.active{
+  background: #ffffff;
+  color: #128be6;
+}
+.aboutMeun_main_meun>ul>li.active::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #128be6;
+}
+.aboutMeun_main_content{
+  width: 970px;
+  background: #ffffff;
+  padding: 10px 40px;
+}
+.aboutMeun_main_title{
+  border-bottom: 3px solid #f5f5f5;
+}
+.aboutMeun_main_title h3{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 45px;
+  position: relative;
+  display: inline-block;
+}
+.aboutMeun_main_title h3:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  width: 100%;
+  background: #128be6;
+}
+.aboutMeun_main_p p{
+  color: #666666;
+  font-size: 14px;
+  line-height: 25px;
+  margin-top: 25px;
 }

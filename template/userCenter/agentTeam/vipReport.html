@@ -1,94 +1,270 @@
+<div class="user_center_mian  vipReport">
+  <div class="title">
+    <span> 会员报表 </span>
+  </div>
+  <div class="conditions">
+    <form class="form-inline" role="form">
+      <ul>
 
-<div class="user_center_mian">
-    <div class="title">
-      <span> 会员报表 </span>
-    </div>
-    <div class="conditions">
-      <form class="form-inline" role="form">
-        <ul>
+        <li>
+          <label for="">  用户名： </label>
+          <input class="form-control" type="text">
+        </li>
+        <li>
+          <label for=""> 游戏时间： </label>
+          <div class="input-group">
+            <input id="start_date" type="text" class="form-control" placeholder="请输入结束时间">
+            <i class="iconfont icon-rili"> </i>
+          </div>
+          至
+          <div class="input-group">
+            <input id="end_date" type="text" class="form-control" placeholder="请输入结束时间">
+            <i class="iconfont icon-rili"> </i>
+          </div>
 
-          <li>
-            <label for=""> 范围： </label>
-            <select class="form-control">
-              <option value="">请选择</option>
-              <option value="">11选5</option>
-              <option value="">11选5</option>
-  
-            </select>
-          </li>
-          <li>
-            <label for=""> 游戏时间： </label>
-            <div class="input-group">
-              <input id="start_date" type="text" class="form-control" placeholder="请输入结束时间">
-              <i class="iconfont icon-rili"> </i>
-            </div>
-            至
-            <div class="input-group">
-              <input id="end_date" type="text" class="form-control" placeholder="请输入结束时间">
-              <i class="iconfont icon-rili"> </i>
-            </div>
-  
-            <button type="button" class="btn btn-primary">
-              搜索
-            </button>
-          </li>
-  
-        </ul>
-  
-  
-      </form>
+          <button type="button" class="btn btn-primary">
+            搜索
+          </button>
+        </li>
+
+      </ul>
+
+
+    </form>
+  </div>
+  <div class="bonusPlay user_center_mian">
+    <div class="title vipReport_title" >
+      <span data-show="#table_vipReport1" class="active"> 基本信息 </span>
+      <span data-show="#table_vipReport2"> 彩票 </span>
+      <span data-show="#table_vipReport3"> 电子游戏-GA </span>
+      <span data-show="#table_vipReport4"> 电子游戏-PT </span>
+      <span data-show="#table_vipReport5"> 竞彩-LM体育 </span>
+      <span data-show="#table_vipReport6"> 竞彩-沙巴体育 </span>
     </div>
-  
-    <div class="table">
+  </div>
+
+  <div class="user_center_mian">
+
+    <div id="table_vipReport1" class="table">
       <table>
         <thead>
           <tr>
-            <th> 彩种 </th>
-            <th> 奖期 </th>
-            <th> 模式 </th>
-            <th> 投注金额(元) </th>
-            <th> 是否追号 </th>
-  
+            <th> 用户名 </th>
+            <th> 快速查看 </th>
+            <th> 不活跃天数 </th>
+            <th> 余额 </th>
+            <th> 充值量 </th>
+            <th> 提款量 </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td> 重庆时时彩 </td>
+            <td> cc </td>
             <td> 20191919 </td>
             <td> 五星直选 </td>
             <td> 2.00元 </td>
             <td> 是 </td>
-  
+            <td> 是 </td>
           </tr>
           <tr>
-            <td> 重庆时时彩 </td>
-            <td> 20191919 </td>
-            <td> 五星直选 </td>
-            <td> 2.00元 </td>
-            <td> 是 </td>
-  
-          </tr>
-          <tr>
-            <td> 重庆时时彩 </td>
-            <td> 20191919 </td>
-            <td> 五星直选 </td>
-            <td> 2.00元 </td>
-            <td> 是 </td>
+            <td> 合计 </td>
+            <td> </td>
+            <td> </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="table_btn">
-      [1/0] 总计0条记录1 <span> 上一页 </span> <span> 下一页 </span> <span> 首页 </span> <span> 尾页 </span>
+  
+    <div id="table_vipReport2" class="table">
+      <table>
+        <thead>
+          <tr>
+            <th> 用户名 </th>
+            <th> 团队购买量 </th>
+            <th> 返点 </th>
+            <th> 优惠量 </th>
+            <th> 下级佣金量 </th>
+            <th> 中奖金额 </th>
+            <th> 实际盈亏 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> cc </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+  
+          </tr>
+          <tr>
+            <td> 合计 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  
+    <div id="table_vipReport3" class="table">
+      <table>
+        <thead>
+          <tr>
+            <th> 用户名 </th>
+            <th> 团队购买量 </th>
+            <th> 中奖金额 </th>
+            <th> 返点量 </th>
+            <th> 游戏盈亏 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> cc </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <td> 合计 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div id="table_vipReport4" class="table">
+      <table>
+        <thead>
+          <tr>
+            <th> 用户名 </th>
+            <th> 团队购买量 </th>
+            <th> 中奖金额 </th>
+            <th> 返点量 </th>
+            <th> 游戏盈亏 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> cc </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <td> 合计 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div id="table_vipReport5" class="table">
+      <table>
+        <thead>
+          <tr>
+            <th> 用户名 </th>
+            <th> 团队购买量 </th>
+            <th> 中奖金额 </th>
+            <th> 返点量 </th>
+            <th> 游戏盈亏 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> cc </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <td> 合计 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div id="table_vipReport6" class="table">
+      <table>
+        <thead>
+          <tr>
+            <th> 用户名 </th>
+            <th> 团队购买量 </th>
+            <th> 中奖金额 </th>
+            <th> 返点量 </th>
+            <th> 游戏盈亏 </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> cc </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <td> 合计 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+            <td> 0 </td>
+  
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
-  <script>
-    $('#start_date').dcalendarpicker({
-      format: 'yyyy-mm-dd'
-    });
-    $('#end_date').dcalendarpicker({
-      format: 'yyyy-mm-dd'
-    });
-  
-  </script>
-  
+
+
+
+
+
+
+
+
+
+  <!-- <div class="table_btn">
+      [1/0] 总计0条记录1 <span> 上一页 </span> <span> 下一页 </span> <span> 首页 </span> <span> 尾页 </span>
+    </div> -->
+</div>
+<script>
+  $('#start_date').dcalendarpicker({
+    format: 'yyyy-mm-dd'
+  });
+  $('#end_date').dcalendarpicker({
+    format: 'yyyy-mm-dd'
+  });
+
+  $(".vipReport_title>span").on('click',function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    $($(this).attr('data-show')).show().siblings().hide();
+  })
+  $(".vipReport_title>span").eq(0).click();
+
+</script>

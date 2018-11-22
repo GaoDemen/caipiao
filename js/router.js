@@ -38,8 +38,10 @@ $(function () {
       // 主页
       case null:
       case 'home':
-        // 活动
+      // 活动
       case 'active':
+      // 下载中心
+      case 'download':
         if (domLink == null) {
           domLink = 'home'
         };
@@ -49,7 +51,7 @@ $(function () {
             window.history.pushState({
               time: new Date()
             }, "", window.location.href.split('?')[0]);
-          } else if (domLink == "active") {
+          } else{
             window.history.pushState({
               time: new Date()
             }, "", window.location.href.split('?')[0] + '?id=' + domLink);
@@ -61,7 +63,7 @@ $(function () {
         $(meunDom.contantBox).load('./template/money/money.html', function () {
 
           switch (domChildLink) {
-            // 充值
+              // 充值
             case 'topUpMoney':
               // 提款
             case 'withdrawalsMoney':
@@ -152,7 +154,7 @@ $(function () {
             case 'lowerOrders':
             case 'preferentiallist':
             case 'registeLower':
-            
+
               $(meunDom.userCenterContent).load('./template/userCenter/agentTeam/' + domChildLink + '.html',
                 function () {
                   window.history.pushState({
@@ -174,6 +176,11 @@ $(function () {
           }
         })
         break;
+      case "aboutUs":
+        $(meunDom.contantBox).load('./template/aboutUs/aboutMeun.html', function () {
+
+        })
+        break;  
       default:
         $(meunDom.contantBox).load('./template/home/home.html', function () {
           window.history.pushState({
@@ -232,5 +239,7 @@ $(function () {
   // 加载底部
   $(meunDom.footer).load("./template/footer.html", function () {
     $(meunDom.footerLogo).attr('src', './image/index/footerbg.png');
+   
+
   });
 })

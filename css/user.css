@@ -149,16 +149,8 @@
 .user_footer {
   width: 100%;
 
-  display: -webkit-flex;
-  /*新版本语法：chrome 21+*/
   display: flex;
-  /*新版本语法:opera 12.1,Firefox 22+*/
-  display: -webkit-box;
-  /*老版本语法：Safari,iOS,Android browser,old Webkit browser*/
-  display: -moz-box;
-  /*老版本语法：Firefox(buggy)*/
-  display: -ms-flexbox;
-  /*混合版本语法：IE 10*/
+  display: -ms-flex;
 }
 
 .user_footer_left {
@@ -828,4 +820,13 @@
 }
 .betDetail_mian ul li span:nth-child(2){
   color: #999999;
+}
+
+
+/* 会员报表 */
+.vipReport>.bonusPlay {
+  margin-top: 20px;
+}
+.vipReport>.user_center_mian>.table{
+  display: none;
 }
