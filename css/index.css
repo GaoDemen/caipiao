@@ -383,7 +383,17 @@
 .nav_bottom_main>ul>.e_game:hover>.e_game_meun {
   display: block;
 }
+.nav_bottom_main>ul>.e_game:hover>.e_game_meun dd {
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  width: 18px;
+  height: 9px;
+  background: url('../image/index/more.png');
 
+}
 .nav_bottom_main>ul>.e_game>.e_game_meun li {
   border-bottom: 1px solid #5d5d5d;
   height: 50px;
@@ -878,6 +888,7 @@
   display: none;
 }
 
+
 #user_center dd {
   position: absolute;
   left: 50%;
@@ -1328,7 +1339,7 @@ l .left_top_list .easyScroll_scroll_vertical.theme_default {
 .download {
   background: url('../image/download/bgdownload.png');
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   overflow: hidden;
 }
 

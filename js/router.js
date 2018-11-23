@@ -30,7 +30,10 @@ $(function () {
     userCenterContent: '#userCenterContent',
     userMoneyMangContent: '#userMoneyMangContent',
     userMoneyMangMeun: '#userMoneyMangMeun',
-    userCenterJunpToMoney: '#userCenterJunpToMoney'
+    userCenterJunpToMoney: '#userCenterJunpToMoney',
+    aboutUsContent: '#aboutUsContent',
+    aboutUsMeun: '#aboutUsMeun',
+    footerAboutUsMeun:'#footerAboutUsMeun'
   }
 
   var router = function (domLink, domChildLink) {
@@ -38,9 +41,9 @@ $(function () {
       // 主页
       case null:
       case 'home':
-      // 活动
+        // 活动
       case 'active':
-      // 下载中心
+        // 下载中心
       case 'download':
         if (domLink == null) {
           domLink = 'home'
@@ -51,7 +54,7 @@ $(function () {
             window.history.pushState({
               time: new Date()
             }, "", window.location.href.split('?')[0]);
-          } else{
+          } else {
             window.history.pushState({
               time: new Date()
             }, "", window.location.href.split('?')[0] + '?id=' + domLink);
@@ -63,7 +66,7 @@ $(function () {
         $(meunDom.contantBox).load('./template/money/money.html', function () {
 
           switch (domChildLink) {
-              // 充值
+            // 充值
             case 'topUpMoney':
               // 提款
             case 'withdrawalsMoney':
@@ -177,10 +180,27 @@ $(function () {
         })
         break;
       case "aboutUs":
+        $(meunDom.headerNav).removeClass('active');
         $(meunDom.contantBox).load('./template/aboutUs/aboutMeun.html', function () {
-
+          $(meunDom.aboutUsMeun + ">li[data-link =" + domChildLink + "]").addClass('active').siblings().removeClass('active');
+          $(meunDom.aboutUsMeun + ">li").on('click', function () {
+            router('aboutUs', $(this).attr("data-link"));
+          })
+          switch (domChildLink) {
+            case "aboutUs": // 关于我们
+            case "contactUs": // 联系我们
+            case "gameHelp": // 游戏帮助
+            case "helpCenter": // 帮助中心
+            case "hijacked": // 防劫持教程
+              $(meunDom.aboutUsContent).load('./template/aboutUs/' + domChildLink + '.html', function () {
+                window.history.pushState({
+                  time: new Date()
+                }, "", window.location.href.split('?')[0] + '?id=aboutUs&childId=' + domChildLink);
+              })
+              break;
+          }
         })
-        break;  
+        break;
       default:
         $(meunDom.contantBox).load('./template/home/home.html', function () {
           window.history.pushState({
@@ -188,7 +208,6 @@ $(function () {
           }, "", window.location.href.split('?')[0]);
         });
     }
-
   }
 
   $(meunDom.header).load("./template/header.html", function () {
@@ -239,7 +258,9 @@ $(function () {
   // 加载底部
   $(meunDom.footer).load("./template/footer.html", function () {
     $(meunDom.footerLogo).attr('src', './image/index/footerbg.png');
-   
-
+      $(meunDom.footerAboutUsMeun+'>li').on('click',function () { 
+        window.scrollTo(0, 0);
+        router('aboutUs', $(this).attr("data-link"));
+      })
   });
 })

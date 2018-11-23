@@ -5,12 +5,59 @@
 2.image 本地静态图片文件
 3.css js 文件夹存放本地需要改动的js css文件
 4.page为页面文件
+    page
+        caipiao 为投注页面
+        charts  为走势图页面
+        chase   为追号投注 手工注单页面
+    other
+        err 错误页面
+        notAccess 为ip限制登录页面    
 5.template为页面组件文件
    5-1  userCenter 个人中心相关文件夹
-        添加 chaseBet 追号详情页面
-        添加 betDetail 投注详情页面
-   5-2  money 充值 提款 等相关页面
+            agentTeam 代理团队相关页面
+                vipManagement 会员管理
+                vipReport 会员报表
+                registeLower 注册下级
+                lowerOrders 下级订单
+                preferentiallist 优惠列表
+            personaInfo 个人中心相关页面
+                personalData 个人资料
+                changePassword 密码修改
+                bindCard 卡号绑定
+                bonusPlay 玩法奖金
+            gameRecord 游戏记录相关页面
+                queryOrder 订单查询
+                chaseRecord 追号记录
+                ptRecord pt记录
+                gaRecord ga记录 
+                shababRecord 沙巴游戏
+                agRecord ag游戏
+                (~~特别说明~~)
+                chaseBet 追号详情页面
+                betDetail 投注详情页面
+            moneyRecord  资金记录相关页面  
+                withdrawalsRecords 提款记录
+                moneyDetail 资金明细
+            Information 信息管理相关页面
+                inBox 收件箱
+                outBox 发件箱
+                sendBox 发邮件
+   5-2  money 
+            topUpMoney 充值 
+            withdrawalsMoney 提款 
+            transferMoney 转账
    5-3  game 游戏相关页面
+            chase 追号投注页面
+   5-3  aboutUs 关于页面
+            aboutUs    // 关于我们
+            contactUs  // 联系我们
+            gameHelp   // 游戏帮助
+            helpCenter // 帮助中心
+            hijacked   // 防劫持教程
+   5-3  home 主页页面
+            active     // 活动页面    
+            download   // 下载中心页面
+            home       // 首页
 
 6.index.html 入口文件(主页)  
 7.login.html 为登录页面

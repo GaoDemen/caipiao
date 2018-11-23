@@ -326,6 +326,7 @@ body .edu_huzhuang .layui-layer-title {
   line-height: 49px;
   font-size: 16px;
   color: #4a4a4b;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 body .edu_huzhuang .layui-layer-setwin {
@@ -384,6 +385,8 @@ body .edu_huzhuang .layui-layer-content>.content_ul>li.cunk a{
     text-align: center;
     line-height: 28px;
     margin-left: 3px;
+    font-size: 12px;
+    color: #666666;
 }
 body .edu_huzhuang .layui-layer-content>.content_ul>li b{
   font-size: 16px;
@@ -409,9 +412,9 @@ body .edu_huzhuang .layui-layer-content>.content_ul>li>span:nth-child(1) {
 }
 
 body .edu_huzhuang .layui-layer-content>.content_btn {
-  background-image: -moz-linear-gradient(180deg, rgb(61, 69, 126) 0%, rgb(192, 105, 47) 100%);
-  background-image: -webkit-linear-gradient(180deg, rgb(61, 69, 126) 0%, rgb(192, 105, 47) 100%);
-  background-image: -ms-linear-gradient(180deg, rgb(61, 69, 126) 0%, rgb(192, 105, 47) 100%);
+  background-image: -moz-linear-gradient(right, rgb(61, 69, 126) 0%, rgb(192, 105, 47) 100%);
+  background-image: -webkit-linear-gradient(right, rgb(61, 69, 126) 0%, rgb(192, 105, 47) 100%);
+  background-image: -ms-linear-gradient(right, rgb(61, 69, 126) 0%, rgb(192, 105, 47) 100%);
   width: 273px;
   height: 44px;
   border-radius: 44px;
