@@ -61,8 +61,9 @@
 
 6.index.html 入口文件(主页)  
 7.login.html 为登录页面
-8.server.js node搭建本地环境文件 详情请看 #启动 (如果用php等其他语言 这个完全没有必要看,完全是为了本地开发)
-9.特别说明\page\game\charts.html 下为走势图页面
+8.registered.html 为用户注册页面
+9.server.js node搭建本地环境文件 详情请看 #启动 (如果用php等其他语言 这个完全没有必要看,完全是为了本地开发)
+10.特别说明\page\game\charts.html 下为走势图页面
 
 # 插件
 1.动画库 animate
@@ -94,4 +95,9 @@
 # 跳转
 1.点首页重庆时时彩 跳转投注页面
 2.其他页面对应文字
+
+
+
+	
+
 
