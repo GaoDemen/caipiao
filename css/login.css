@@ -106,9 +106,15 @@ body {
 .login_art>header {
   width: 540px;
   height: 220px;
-  background: url('../image/login/login_logo.png')
+  background: url('../image/login/login_logo.png');
+  overflow: hidden;
+  text-align: center;
 }
-
+.login_art>header>img{
+  width: 248px;
+  height: 51px;
+  margin-top: 60px;
+}
 .login_art>section {
   width: 540px;
   height: 350px;

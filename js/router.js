@@ -211,7 +211,7 @@ $(function () {
   }
 
   $(meunDom.header).load("./template/header.html", function () {
-    $(meunDom.navLogo).attr('src', './image/index/logo.png');
+    $(meunDom.navLogo).attr('src', './image/login/logo.png');
     router(getUrlKey('id'), getUrlKey('childId'))
     //导航点击
     $(meunDom.headerNav).on('click', function () {
